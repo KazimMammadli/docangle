@@ -1,0 +1,21 @@
+cases 6291 (non-ambiguous 5603), pages 1357; docTR time per page (2 views) mean 17.4 ms
+
+quadrant errors (non-ambiguous cases)   all | primary | external | per pool
+  PP-LCNet                      382 | 157 | 225 | az:0 ext_cord:182 ext_docla:25 ext_funsd:18 invoices:59 rvl_heldo:84 tobacco_c:14
+  own v4                         36 |   7 |  29 | az:0 ext_cord:5 ext_docla:24 ext_funsd:0 invoices:6 rvl_heldo:1 tobacco_c:0
+  docTR                         295 | 138 | 157 | az:25 ext_cord:60 ext_docla:69 ext_funsd:28 invoices:48 rvl_heldo:46 tobacco_c:19
+  current (LCNet + own)          25 |   6 |  19 | az:0 ext_cord:5 ext_docla:14 ext_funsd:0 invoices:4 rvl_heldo:2 tobacco_c:0
+  + docTR x0.25                  25 |   6 |  19 | az:0 ext_cord:4 ext_docla:15 ext_funsd:0 invoices:3 rvl_heldo:3 tobacco_c:0
+  + docTR x0.5                   26 |   7 |  19 | az:0 ext_cord:5 ext_docla:14 ext_funsd:0 invoices:3 rvl_heldo:4 tobacco_c:0
+  + docTR x0.75                  26 |   7 |  19 | az:0 ext_cord:5 ext_docla:14 ext_funsd:0 invoices:3 rvl_heldo:4 tobacco_c:0
+  + docTR x1.0                   32 |   7 |  25 | az:0 ext_cord:8 ext_docla:16 ext_funsd:1 invoices:3 rvl_heldo:4 tobacco_c:0
+  + docTR x1.5                   52 |  16 |  36 | az:0 ext_cord:16 ext_docla:18 ext_funsd:2 invoices:5 rvl_heldo:10 tobacco_c:1
+
+error overlap: current wrong 25, docTR wrong 295, both wrong 16, current wrong but docTR right 9, docTR wrong but current right 279
+
+review rule v4.3 (conf = fused posterior - 0.30*fallback, review < 0.90): review % / accepted flips (primary | external)
+  docTR weight 0.00: primary t0.9:  1.1% /  0 | primary t0.95:  2.6% /  0 | external t0.9:  3.8% /  5 | external t0.95:  7.2% /  2
+  docTR weight 0.25: primary t0.9:  1.2% /  0 | primary t0.95:  1.8% /  0 | external t0.9:  3.0% /  5 | external t0.95:  4.5% /  2
+  docTR weight 0.50: primary t0.9:  1.3% /  0 | primary t0.95:  1.7% /  0 | external t0.9:  3.3% /  4 | external t0.95:  4.6% /  2
+  docTR weight 0.75: primary t0.9:  1.4% /  0 | primary t0.95:  1.9% /  0 | external t0.9:  3.6% /  5 | external t0.95:  4.7% /  2
+  docTR weight 1.00: primary t0.9:  1.5% /  1 | primary t0.95:  2.1% /  0 | external t0.9:  3.7% /  6 | external t0.95:  4.6% /  4

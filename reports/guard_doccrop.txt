@@ -1,0 +1,9 @@
+# Accuracy guard of the document crop on normal pages (bench.guard, az invoices ext_cord ext_funsd x photo_easy photo_hard, 50 cases each).
+# Variant names in THIS run: docangle_crop = doc_crop_max_area 0.60, docangle_crop35 = 0.35, docangle_crop25 = 0.25 (the final default; today it is called docangle_crop).
+
+cases 400
+candidate              ms  flips  <=1deg%  <=0.5%  >5deg  same<=0.05deg%  same<=0.5deg%  better/worse by>0.25deg
+docangle             32.7      2     97.0    91.2      2           100.0          100.0            0/0
+docangle_crop        37.6      2     96.8    89.5      2            87.5           98.0            1/11
+docangle_crop35      36.9      2     97.0    90.5      2            95.2           98.8            1/7
+docangle_crop25      37.3      2     97.0    91.0      2            97.0           99.0            1/4

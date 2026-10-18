@@ -1,0 +1,6 @@
+DISE-2021 test split, +-45 deg, random 600 of 2800 images (seed 0), docangle v4.1 vs C8+L (bench/dise_eval.py)
+docangle  n=600 median 0.20  <=1deg 89.3%  <=2deg 90.7%  >5deg 51  flips(>45) 37 (6.2%)   review flagged 32; >5deg accepted 28
+C8+L      n=600 median 0.23  <=1deg 84.0%  <=2deg 87.2%  >5deg 70  flips(>45) 55 (9.2%)
+by |skew| (docangle <=1deg): 0-5: 89.8%  5-15: 90.6%  15-30: 90.7%  30-46: 86.8%
+Looked at all 37 flips: ~12 Chinese vertical-text pages, ~10 comics/floor plans/design covers (ambiguous), ~8 noisy dithered scans or ruled
+forms with sparse content, a few covers with huge stylised lettering. Mostly out of the Latin business-document domain; the noisy scans are real weaknesses.

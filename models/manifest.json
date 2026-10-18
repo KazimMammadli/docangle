@@ -1,0 +1,44 @@
+{
+  "document_angle_detector_large.onnx": {
+    "sha256": "01f778baee9f121d29c6a096f774dd1a752d6f54bbc7f8eac84d932350f453da",
+    "bytes": 12376052,
+    "role": "fallback global 360-degree regressor (MobileNetV3-Large, [sin,cos]); fallback flag set in 63 of 6300 v4.4 benchmark cases (1.0 %); NOT accurate on its own",
+    "input": "1x3x384x384 RGB ImageNet-normalised",
+    "provenance": "the training run was not preserved; trained on synthetic rotations of Tobacco3482 pages (see models/README.md)",
+    "license": "see models/README.md"
+  },
+  "pp_lcnet_doc_ori.onnx": {
+    "sha256": "7ab8929b28265e3e6906fc44d966e735727f23a37ec042a3ad391667e5c13068",
+    "bytes": 6783057,
+    "role": "4-class page orientation (0/90/180/270 clockwise labels), softmax output",
+    "input": "1x3x224x224 ImageNet-normalised, short side 256 + centre crop",
+    "provenance": "PaddleOCR PP-LCNet_x1_0_doc_ori converted to ONNX",
+    "license": "Apache-2.0 (PaddleOCR / PaddleX)"
+  },
+  "orient_cls_v4.onnx": {
+    "sha256": "886426f28b7586517b0a5444137bff7ee508992fa48a1ba77242e7d099aa9f9c",
+    "bytes": 16823964,
+    "role": "our 4-class page orientation classifier (clockwise 0/90/180/270), 2 views (0 and 180 deg) vote in the pipeline",
+    "input": "1x1x320x320 grayscale, (x/255-0.449)/0.226, page squashed to 320x320",
+    "provenance": "src/train_orientation.py: MobileNetV3-Large fine-tuned from orient_cls_v3 (itself fine-tuned from orient_cls_v1) on audited Tobacco, synthetic Azerbaijani pages, RVL invoices, CORD train receipts, DocLayNet-small pages; args + history in orient_cls_v4.pt / orient_cls_v4_history.json; see MODEL_CARD.md",
+    "license": "trained here; ImageNet-pretrained torchvision backbone (BSD-3); weights inherit research-only restrictions of the Tobacco/RVL-CDIP data until the maintainer decides otherwise"
+  },
+  "orient_cls_v4.pt": {
+    "sha256": "b7e25ae682fc510a9636cd482b5d3edfa97405b81451069182a5245d8c9f00f3",
+    "bytes": 17041923,
+    "role": "PyTorch checkpoint of orient_cls_v4 (args, epoch, val metrics inside); needed to retrain/export"
+  },
+  "orient_cls_v1.onnx": {
+    "sha256": "9e53fc385fb5b1fe4288ce34b0ce31398147b0f9dba469baac7ea63e889cbf08",
+    "bytes": 16823964,
+    "role": "first-generation classifier, used ONLY as an independent voter by src/label_audit.py (not by the pipeline)",
+    "provenance": "trained on Tobacco3482 pages and synthetic pages (see docs/03-models-and-data.md)",
+    "license": "as orient_cls_v4"
+  },
+  "orient_cls_v4_history.json": {
+    "sha256": "aa19a50ab1ad9dee2ebf27d3e0e9be9824facbd235cc51ab1fc10977543ae890",
+    "bytes": 3393,
+    "role": "training history of orient_cls_v4 (per-epoch metrics; the arguments are in orient_cls_v4.pt)"
+  },
+  "_notes": "only the files that are present in this folder are listed; the intermediate classifier orient_cls_v3 and the regressor's training checkpoint are not distributed"
+}

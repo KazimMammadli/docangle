@@ -1,0 +1,17 @@
+560 pages (one-page JPEG scanner-style PDFs), fast-path usage: {'fast': 560}
+angle difference fast vs render: max 179.880 deg, mean 0.4736; > 0.05 deg: 9, > 0.25 deg: 7, > 45 deg (quadrant): 1
+review flag differs: 3; confidence differs by > 0.01: 8
+render (PDFium)  flips   5 | <=1deg  95.2 % | <=0.5deg  88.0 % | >5deg 5
+fast path        flips   6 | <=1deg  94.8 % | <=0.5deg  87.3 % | >5deg 6
+paired vs truth (threshold 0.25 deg): fast better in 2, worse in 5
+cases where the two paths differ by more than 0.25 deg:
+  invoices/photo_hard certified_invoice_063.png [gray 300 dpi] gt +17.5: render 17.47 (conf 0.496, review True) | fast 16.37 (conf 0.092, review True)
+  rvl_heldout/scan 000702.png [colour 200 dpi] gt +20.5: render 20.19 (conf 0.999, review False) | fast 19.93 (conf 0.999, review False)
+  ext_doclaynet/photo_hard doclaynet_0008.png [gray 150 dpi] gt +41.6: render 131.84 (conf 0.303, review True) | fast 131.49 (conf 0.328, review True)
+  ext_doclaynet/photo_hard doclaynet_0002.png [gray 300 dpi] gt +59.7: render 59.69 (conf 0.894, review True) | fast -120.19 (conf 0.555, review True)
+  ext_cord/scan cord_0183.png [colour 200 dpi] gt -147.2: render -50.65 (conf 0.377, review True) | fast -14.31 (conf 0.376, review True)
+  ext_cord/scan cord_0087.png [gray 150 dpi] gt -115.7: render 65.87 (conf 0.387, review True) | fast 64.49 (conf 0.385, review True)
+  ext_cord/photo_hard cord_0087.png [gray 150 dpi] gt -138.7: render -0.33 (conf 0.388, review True) | fast -44.42 (conf 0.383, review True)
+  gray 150 dpi    n=196 max diff 44.090 deg, flips render 3 / fast 3
+  gray 300 dpi    n=182 max diff 179.880 deg, flips render 0 / fast 1
+  colour 200 dpi  n=182 max diff 36.340 deg, flips render 2 / fast 2

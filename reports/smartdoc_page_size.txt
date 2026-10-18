@@ -1,0 +1,8 @@
+every 50th frame: 420 frames
+  page bounding box, long side                            median   590.8 px | 5th-95th percentile   449.9 -   768.7 | min   380.8 max   947.2
+  cut-out (page + 8 % margin each side), long side        median   685.4 px | 5th-95th percentile   521.9 -   891.6 | min   441.7 max  1098.8
+  share of the 1920 x 1080 frame covered by the page      median    11.7 % | 5th-95th percentile     7.2 -    16.2 | min     5.9 max    24.2
+every 25th frame: 926 frames
+  page bounding box, long side                            median   597.1 px | 5th-95th percentile   453.0 -   781.4 | min   380.8 max   947.2
+  cut-out (page + 8 % margin each side), long side        median   692.6 px | 5th-95th percentile   525.5 -   906.4 | min   441.7 max  1098.8
+  share of the 1920 x 1080 frame covered by the page      median    11.9 % | 5th-95th percentile     7.2 -    16.4 | min     5.9 max    24.2

@@ -1,0 +1,12 @@
+400 simulated pages, any angle in [-180,180]; error of the tilt modulo 90 degrees (quarter turns cannot be judged by these methods)
+level / method                        n  <=1 deg  <=2 deg  >5 deg  >10 deg  median
+scan / textbook minAreaRect         200    83.5%    90.0%    1.5%     0.5%   0.06
+scan / docangle Fourier tilt        200    96.5%   100.0%    0.0%     0.0%   0.14
+photo_hard / textbook minAreaRect   200    11.0%    16.5%   75.0%    66.5%  19.06
+photo_hard / docangle Fourier tilt  200    99.5%   100.0%    0.0%     0.0%   0.05
+all / textbook minAreaRect          400    47.2%    53.2%   38.2%    33.5%   1.56
+all / docangle Fourier tilt         400    98.0%   100.0%    0.0%     0.0%   0.08
+  az             minAreaRect <=1deg  52.0% | docangle 100.0%
+  invoices       minAreaRect <=1deg  43.0% | docangle 100.0%
+  tobacco_cert   minAreaRect <=1deg  46.0% | docangle  96.0%
+  rvl_heldout    minAreaRect <=1deg  48.0% | docangle  96.0%

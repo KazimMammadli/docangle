@@ -1,0 +1,18 @@
+12 pages in one scanned PDF (150 dpi rasters), rendered at 2480 px long side, PaddleOCR PP-OCRv6 on gpu:0; word F1 %, per page
+page true angle    found review | OCR alone + docangle
+   1          0    -0.01        |      99.4       99.4
+   2          5    +4.99        |      99.9       99.9
+   3         15   +15.01        |      98.7       99.6
+   4         30   +30.00        |     100.0      100.0
+   5         45   +44.98        |      99.5       98.2
+   6         90   +90.00        |       3.1      100.0
+   7        135  +135.01        |       1.9       98.7
+   8        180  -180.00        |      14.3       99.6
+   9        270   -90.00        |     100.0      100.0
+  10        -37   -37.02        |      94.9       94.6
+  11         12   +11.99        |     100.0      100.0
+  12        200  -159.98        |       3.3      100.0
+mean                            |      67.9       99.2
+docangle angle error: max 0.02 deg, mean 0.01 deg over 12 pages; 0 of 12 sent to review
+alone     median per page: CPU side 55 ms, OCR 1305 ms; 12 pages in 14.91 s = 0.805 pages/s; sum of OCR times 14.9 s; GPU memory 3802 MB
+docangle  median per page: CPU side 226 ms, OCR 1147 ms; 12 pages in 12.75 s = 0.941 pages/s; sum of OCR times 12.7 s; GPU memory 3740 MB

@@ -1,0 +1,8 @@
+Static int8 quantisation experiment, re-run 2026-10-17 on mains power (bench.quantize_models make, then agree --seed-start 200)
+orient_cls_v4: 420 calibration tensors
+  wrote models/experimental/orient_cls_v4.int8.onnx (4.7 MB, 55 s)
+pp_lcnet_doc_ori: 840 calibration tensors
+  wrote models/experimental/pp_lcnet_doc_ori.int8.onnx (1.9 MB, 47 s)
+
+orient_cls_v4: 420 views, same argmax 90.48 %, max |logit difference| 4.655; fp32 7.1 ms, int8 8.0 ms per call of 2 views
+pp_lcnet_doc_ori: 840 views, same argmax 81.31 %, max |logit difference| 0.859; fp32 4.2 ms, int8 19.1 ms per call of 4 views

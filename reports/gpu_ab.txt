@@ -1,0 +1,14 @@
+120 simulated photo pages (original sizes ~2029 px long side), predict() on in-memory gray images
+GPU memory held by this process after loading the models: 286 MB
+
+SINGLE CALLER THREAD (ms per page)               median    mean     p95   process CPU ms/page
+  CPU (default)                      38.6     39.3    44.6          226.3
+  GPU (ort_provider='cuda')          16.8     18.4    28.5          101.6
+
+RESULTS CPU vs GPU on 120 pages: identical angle (to 0.01 deg) 120, differ > 0.05 deg: 0, > 0.5 deg: 0, > 45 deg (quadrant): 0; review flag differs 0; max |dconf| 0.0000
+
+THROUGHPUT (pages/s, all pages x2, caller threads)  and CPU cost
+  1 thread(s) CPU (default)                  24.4 pages/s   CPU  235.9 ms/page
+  1 thread(s) GPU (ort_provider='cuda')      55.2 pages/s   CPU  101.9 ms/page
+  4 thread(s) CPU (default)                  17.9 pages/s   CPU  518.0 ms/page
+  4 thread(s) GPU (ort_provider='cuda')      96.9 pages/s   CPU   89.7 ms/page

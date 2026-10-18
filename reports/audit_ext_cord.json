@@ -1,0 +1,1484 @@
+{
+ "pool": "ext_cord",
+ "n": 200,
+ "flagged": [
+  {
+   "file": "cord_0000.png",
+   "angle": -179.05,
+   "conf": 0.69,
+   "review": true
+  },
+  {
+   "file": "cord_0002.png",
+   "angle": -178.98,
+   "conf": 0.078,
+   "review": true
+  },
+  {
+   "file": "cord_0004.png",
+   "angle": 90.05,
+   "conf": 0.139,
+   "review": true
+  },
+  {
+   "file": "cord_0007.png",
+   "angle": 178.42,
+   "conf": 0.567,
+   "review": true
+  },
+  {
+   "file": "cord_0015.png",
+   "angle": 178.79,
+   "conf": 0.289,
+   "review": true
+  },
+  {
+   "file": "cord_0019.png",
+   "angle": 153.94,
+   "conf": 0.4,
+   "review": true
+  },
+  {
+   "file": "cord_0020.png",
+   "angle": -178.98,
+   "conf": 0.827,
+   "review": false
+  },
+  {
+   "file": "cord_0030.png",
+   "angle": -179.9,
+   "conf": 0.057,
+   "review": true
+  },
+  {
+   "file": "cord_0033.png",
+   "angle": -179.78,
+   "conf": 0.525,
+   "review": true
+  },
+  {
+   "file": "cord_0039.png",
+   "angle": -179.33,
+   "conf": 0.544,
+   "review": true
+  },
+  {
+   "file": "cord_0040.png",
+   "angle": 163.94,
+   "conf": 0.4,
+   "review": true
+  },
+  {
+   "file": "cord_0049.png",
+   "angle": 178.88,
+   "conf": 0.468,
+   "review": true
+  },
+  {
+   "file": "cord_0050.png",
+   "angle": -180.0,
+   "conf": 0.575,
+   "review": true
+  },
+  {
+   "file": "cord_0058.png",
+   "angle": 44.93,
+   "conf": 0.4,
+   "review": true
+  },
+  {
+   "file": "cord_0062.png",
+   "angle": 178.15,
+   "conf": 0.476,
+   "review": true
+  },
+  {
+   "file": "cord_0064.png",
+   "angle": -179.36,
+   "conf": 0.34,
+   "review": true
+  },
+  {
+   "file": "cord_0067.png",
+   "angle": -177.24,
+   "conf": 0.621,
+   "review": true
+  },
+  {
+   "file": "cord_0068.png",
+   "angle": -180.0,
+   "conf": 0.504,
+   "review": true
+  },
+  {
+   "file": "cord_0072.png",
+   "angle": 179.26,
+   "conf": 0.685,
+   "review": true
+  },
+  {
+   "file": "cord_0076.png",
+   "angle": 179.79,
+   "conf": 0.4,
+   "review": true
+  },
+  {
+   "file": "cord_0083.png",
+   "angle": 165.28,
+   "conf": 0.4,
+   "review": true
+  },
+  {
+   "file": "cord_0087.png",
+   "angle": -179.9,
+   "conf": 0.108,
+   "review": true
+  },
+  {
+   "file": "cord_0089.png",
+   "angle": 169.89,
+   "conf": 0.4,
+   "review": true
+  },
+  {
+   "file": "cord_0094.png",
+   "angle": -179.18,
+   "conf": 0.518,
+   "review": true
+  },
+  {
+   "file": "cord_0096.png",
+   "angle": -178.67,
+   "conf": 0.871,
+   "review": false
+  },
+  {
+   "file": "cord_0107.png",
+   "angle": 179.33,
+   "conf": 0.686,
+   "review": true
+  },
+  {
+   "file": "cord_0109.png",
+   "angle": -179.25,
+   "conf": 0.744,
+   "review": false
+  },
+  {
+   "file": "cord_0116.png",
+   "angle": -179.78,
+   "conf": 0.0,
+   "review": true
+  },
+  {
+   "file": "cord_0121.png",
+   "angle": 179.99,
+   "conf": 0.401,
+   "review": true
+  },
+  {
+   "file": "cord_0122.png",
+   "angle": -180.0,
+   "conf": 0.64,
+   "review": true
+  },
+  {
+   "file": "cord_0125.png",
+   "angle": -180.0,
+   "conf": 0.651,
+   "review": true
+  },
+  {
+   "file": "cord_0136.png",
+   "angle": -178.14,
+   "conf": 0.433,
+   "review": true
+  },
+  {
+   "file": "cord_0138.png",
+   "angle": -177.77,
+   "conf": 0.005,
+   "review": true
+  },
+  {
+   "file": "cord_0145.png",
+   "angle": 167.14,
+   "conf": 0.4,
+   "review": true
+  },
+  {
+   "file": "cord_0157.png",
+   "angle": -180.0,
+   "conf": 0.802,
+   "review": false
+  },
+  {
+   "file": "cord_0166.png",
+   "angle": -175.26,
+   "conf": 0.4,
+   "review": true
+  },
+  {
+   "file": "cord_0170.png",
+   "angle": -180.0,
+   "conf": 0.81,
+   "review": false
+  },
+  {
+   "file": "cord_0173.png",
+   "angle": -107.97,
+   "conf": 0.4,
+   "review": true
+  },
+  {
+   "file": "cord_0181.png",
+   "angle": 162.2,
+   "conf": 0.4,
+   "review": true
+  },
+  {
+   "file": "cord_0185.png",
+   "angle": -180.0,
+   "conf": 0.718,
+   "review": false
+  },
+  {
+   "file": "cord_0187.png",
+   "angle": 179.94,
+   "conf": 0.154,
+   "review": true
+  },
+  {
+   "file": "cord_0189.png",
+   "angle": -180.0,
+   "conf": 0.592,
+   "review": true
+  },
+  {
+   "file": "cord_0191.png",
+   "angle": -180.0,
+   "conf": 0.661,
+   "review": true
+  },
+  {
+   "file": "cord_0192.png",
+   "angle": -178.39,
+   "conf": 0.482,
+   "review": true
+  },
+  {
+   "file": "cord_0196.png",
+   "angle": -178.49,
+   "conf": 0.479,
+   "review": true
+  },
+  {
+   "file": "cord_0197.png",
+   "angle": -178.16,
+   "conf": 0.673,
+   "review": true
+  }
+ ],
+ "all": [
+  {
+   "file": "cord_0000.png",
+   "angle": -179.05,
+   "conf": 0.69,
+   "review": true
+  },
+  {
+   "file": "cord_0001.png",
+   "angle": 0.0,
+   "conf": 0.471,
+   "review": true
+  },
+  {
+   "file": "cord_0002.png",
+   "angle": -178.98,
+   "conf": 0.078,
+   "review": true
+  },
+  {
+   "file": "cord_0003.png",
+   "angle": 2.2,
+   "conf": 0.883,
+   "review": false
+  },
+  {
+   "file": "cord_0004.png",
+   "angle": 90.05,
+   "conf": 0.139,
+   "review": true
+  },
+  {
+   "file": "cord_0005.png",
+   "angle": 0.0,
+   "conf": 0.685,
+   "review": true
+  },
+  {
+   "file": "cord_0006.png",
+   "angle": 0.0,
+   "conf": 0.846,
+   "review": false
+  },
+  {
+   "file": "cord_0007.png",
+   "angle": 178.42,
+   "conf": 0.567,
+   "review": true
+  },
+  {
+   "file": "cord_0008.png",
+   "angle": 0.0,
+   "conf": 0.837,
+   "review": false
+  },
+  {
+   "file": "cord_0009.png",
+   "angle": 0.0,
+   "conf": 0.943,
+   "review": false
+  },
+  {
+   "file": "cord_0010.png",
+   "angle": -0.41,
+   "conf": 0.795,
+   "review": false
+  },
+  {
+   "file": "cord_0011.png",
+   "angle": 2.94,
+   "conf": 0.822,
+   "review": false
+  },
+  {
+   "file": "cord_0012.png",
+   "angle": 0.0,
+   "conf": 0.514,
+   "review": true
+  },
+  {
+   "file": "cord_0013.png",
+   "angle": 0.0,
+   "conf": 0.967,
+   "review": false
+  },
+  {
+   "file": "cord_0014.png",
+   "angle": 0.0,
+   "conf": 0.909,
+   "review": false
+  },
+  {
+   "file": "cord_0015.png",
+   "angle": 178.79,
+   "conf": 0.289,
+   "review": true
+  },
+  {
+   "file": "cord_0016.png",
+   "angle": -0.69,
+   "conf": 0.951,
+   "review": false
+  },
+  {
+   "file": "cord_0017.png",
+   "angle": 0.0,
+   "conf": 0.8,
+   "review": false
+  },
+  {
+   "file": "cord_0018.png",
+   "angle": 0.0,
+   "conf": 0.872,
+   "review": false
+  },
+  {
+   "file": "cord_0019.png",
+   "angle": 153.94,
+   "conf": 0.4,
+   "review": true
+  },
+  {
+   "file": "cord_0020.png",
+   "angle": -178.98,
+   "conf": 0.827,
+   "review": false
+  },
+  {
+   "file": "cord_0021.png",
+   "angle": 0.0,
+   "conf": 0.635,
+   "review": true
+  },
+  {
+   "file": "cord_0022.png",
+   "angle": 0.0,
+   "conf": 0.933,
+   "review": false
+  },
+  {
+   "file": "cord_0023.png",
+   "angle": 0.0,
+   "conf": 0.734,
+   "review": false
+  },
+  {
+   "file": "cord_0024.png",
+   "angle": 0.0,
+   "conf": 0.939,
+   "review": false
+  },
+  {
+   "file": "cord_0025.png",
+   "angle": 0.0,
+   "conf": 0.937,
+   "review": false
+  },
+  {
+   "file": "cord_0026.png",
+   "angle": -4.67,
+   "conf": 0.4,
+   "review": true
+  },
+  {
+   "file": "cord_0027.png",
+   "angle": 0.77,
+   "conf": 0.737,
+   "review": false
+  },
+  {
+   "file": "cord_0028.png",
+   "angle": 0.56,
+   "conf": 0.798,
+   "review": false
+  },
+  {
+   "file": "cord_0029.png",
+   "angle": 0.0,
+   "conf": 0.876,
+   "review": false
+  },
+  {
+   "file": "cord_0030.png",
+   "angle": -179.9,
+   "conf": 0.057,
+   "review": true
+  },
+  {
+   "file": "cord_0031.png",
+   "angle": 1.88,
+   "conf": 0.9,
+   "review": false
+  },
+  {
+   "file": "cord_0032.png",
+   "angle": 0.0,
+   "conf": 0.941,
+   "review": false
+  },
+  {
+   "file": "cord_0033.png",
+   "angle": -179.78,
+   "conf": 0.525,
+   "review": true
+  },
+  {
+   "file": "cord_0034.png",
+   "angle": 0.0,
+   "conf": 0.616,
+   "review": true
+  },
+  {
+   "file": "cord_0035.png",
+   "angle": 0.0,
+   "conf": 0.943,
+   "review": false
+  },
+  {
+   "file": "cord_0036.png",
+   "angle": 0.27,
+   "conf": 0.792,
+   "review": false
+  },
+  {
+   "file": "cord_0037.png",
+   "angle": -1.68,
+   "conf": 0.618,
+   "review": true
+  },
+  {
+   "file": "cord_0038.png",
+   "angle": -0.81,
+   "conf": 0.847,
+   "review": false
+  },
+  {
+   "file": "cord_0039.png",
+   "angle": -179.33,
+   "conf": 0.544,
+   "review": true
+  },
+  {
+   "file": "cord_0040.png",
+   "angle": 163.94,
+   "conf": 0.4,
+   "review": true
+  },
+  {
+   "file": "cord_0041.png",
+   "angle": 2.22,
+   "conf": 0.999,
+   "review": false
+  },
+  {
+   "file": "cord_0042.png",
+   "angle": 0.0,
+   "conf": 0.621,
+   "review": true
+  },
+  {
+   "file": "cord_0043.png",
+   "angle": 0.0,
+   "conf": 0.884,
+   "review": false
+  },
+  {
+   "file": "cord_0044.png",
+   "angle": 0.0,
+   "conf": 0.717,
+   "review": false
+  },
+  {
+   "file": "cord_0045.png",
+   "angle": 2.97,
+   "conf": 0.952,
+   "review": false
+  },
+  {
+   "file": "cord_0046.png",
+   "angle": 0.69,
+   "conf": 0.807,
+   "review": false
+  },
+  {
+   "file": "cord_0047.png",
+   "angle": 0.0,
+   "conf": 0.889,
+   "review": false
+  },
+  {
+   "file": "cord_0048.png",
+   "angle": 0.71,
+   "conf": 0.75,
+   "review": false
+  },
+  {
+   "file": "cord_0049.png",
+   "angle": 178.88,
+   "conf": 0.468,
+   "review": true
+  },
+  {
+   "file": "cord_0050.png",
+   "angle": -180.0,
+   "conf": 0.575,
+   "review": true
+  },
+  {
+   "file": "cord_0051.png",
+   "angle": 0.0,
+   "conf": 0.801,
+   "review": false
+  },
+  {
+   "file": "cord_0052.png",
+   "angle": 1.62,
+   "conf": 0.672,
+   "review": true
+  },
+  {
+   "file": "cord_0053.png",
+   "angle": 0.0,
+   "conf": 0.996,
+   "review": false
+  },
+  {
+   "file": "cord_0054.png",
+   "angle": 1.15,
+   "conf": 0.621,
+   "review": true
+  },
+  {
+   "file": "cord_0055.png",
+   "angle": 0.0,
+   "conf": 0.869,
+   "review": false
+  },
+  {
+   "file": "cord_0056.png",
+   "angle": 0.0,
+   "conf": 0.567,
+   "review": true
+  },
+  {
+   "file": "cord_0057.png",
+   "angle": 0.0,
+   "conf": 0.602,
+   "review": true
+  },
+  {
+   "file": "cord_0058.png",
+   "angle": 44.93,
+   "conf": 0.4,
+   "review": true
+  },
+  {
+   "file": "cord_0059.png",
+   "angle": 0.0,
+   "conf": 0.964,
+   "review": false
+  },
+  {
+   "file": "cord_0060.png",
+   "angle": 0.81,
+   "conf": 0.905,
+   "review": false
+  },
+  {
+   "file": "cord_0061.png",
+   "angle": 0.0,
+   "conf": 0.994,
+   "review": false
+  },
+  {
+   "file": "cord_0062.png",
+   "angle": 178.15,
+   "conf": 0.476,
+   "review": true
+  },
+  {
+   "file": "cord_0063.png",
+   "angle": 0.0,
+   "conf": 0.967,
+   "review": false
+  },
+  {
+   "file": "cord_0064.png",
+   "angle": -179.36,
+   "conf": 0.34,
+   "review": true
+  },
+  {
+   "file": "cord_0065.png",
+   "angle": -0.86,
+   "conf": 0.63,
+   "review": true
+  },
+  {
+   "file": "cord_0066.png",
+   "angle": 0.0,
+   "conf": 0.639,
+   "review": true
+  },
+  {
+   "file": "cord_0067.png",
+   "angle": -177.24,
+   "conf": 0.621,
+   "review": true
+  },
+  {
+   "file": "cord_0068.png",
+   "angle": -180.0,
+   "conf": 0.504,
+   "review": true
+  },
+  {
+   "file": "cord_0069.png",
+   "angle": 0.0,
+   "conf": 0.855,
+   "review": false
+  },
+  {
+   "file": "cord_0070.png",
+   "angle": 0.0,
+   "conf": 0.748,
+   "review": false
+  },
+  {
+   "file": "cord_0071.png",
+   "angle": 0.0,
+   "conf": 0.879,
+   "review": false
+  },
+  {
+   "file": "cord_0072.png",
+   "angle": 179.26,
+   "conf": 0.685,
+   "review": true
+  },
+  {
+   "file": "cord_0073.png",
+   "angle": -0.21,
+   "conf": 0.617,
+   "review": true
+  },
+  {
+   "file": "cord_0074.png",
+   "angle": 0.0,
+   "conf": 0.865,
+   "review": false
+  },
+  {
+   "file": "cord_0075.png",
+   "angle": 5.37,
+   "conf": 0.4,
+   "review": true
+  },
+  {
+   "file": "cord_0076.png",
+   "angle": 179.79,
+   "conf": 0.4,
+   "review": true
+  },
+  {
+   "file": "cord_0077.png",
+   "angle": 2.18,
+   "conf": 0.994,
+   "review": false
+  },
+  {
+   "file": "cord_0078.png",
+   "angle": 0.76,
+   "conf": 0.592,
+   "review": true
+  },
+  {
+   "file": "cord_0079.png",
+   "angle": -2.34,
+   "conf": 0.66,
+   "review": true
+  },
+  {
+   "file": "cord_0080.png",
+   "angle": 2.49,
+   "conf": 0.793,
+   "review": false
+  },
+  {
+   "file": "cord_0081.png",
+   "angle": -0.67,
+   "conf": 0.738,
+   "review": false
+  },
+  {
+   "file": "cord_0082.png",
+   "angle": 0.0,
+   "conf": 0.998,
+   "review": false
+  },
+  {
+   "file": "cord_0083.png",
+   "angle": 165.28,
+   "conf": 0.4,
+   "review": true
+  },
+  {
+   "file": "cord_0084.png",
+   "angle": 0.0,
+   "conf": 0.648,
+   "review": true
+  },
+  {
+   "file": "cord_0085.png",
+   "angle": -4.09,
+   "conf": 0.999,
+   "review": false
+  },
+  {
+   "file": "cord_0086.png",
+   "angle": 1.06,
+   "conf": 0.861,
+   "review": false
+  },
+  {
+   "file": "cord_0087.png",
+   "angle": -179.9,
+   "conf": 0.108,
+   "review": true
+  },
+  {
+   "file": "cord_0088.png",
+   "angle": 1.27,
+   "conf": 0.709,
+   "review": false
+  },
+  {
+   "file": "cord_0089.png",
+   "angle": 169.89,
+   "conf": 0.4,
+   "review": true
+  },
+  {
+   "file": "cord_0090.png",
+   "angle": 0.0,
+   "conf": 0.631,
+   "review": true
+  },
+  {
+   "file": "cord_0091.png",
+   "angle": -1.19,
+   "conf": 0.479,
+   "review": true
+  },
+  {
+   "file": "cord_0092.png",
+   "angle": 0.0,
+   "conf": 0.695,
+   "review": true
+  },
+  {
+   "file": "cord_0093.png",
+   "angle": 1.51,
+   "conf": 0.664,
+   "review": true
+  },
+  {
+   "file": "cord_0094.png",
+   "angle": -179.18,
+   "conf": 0.518,
+   "review": true
+  },
+  {
+   "file": "cord_0095.png",
+   "angle": 1.32,
+   "conf": 0.917,
+   "review": false
+  },
+  {
+   "file": "cord_0096.png",
+   "angle": -178.67,
+   "conf": 0.871,
+   "review": false
+  },
+  {
+   "file": "cord_0097.png",
+   "angle": 1.95,
+   "conf": 0.814,
+   "review": false
+  },
+  {
+   "file": "cord_0098.png",
+   "angle": 2.85,
+   "conf": 0.918,
+   "review": false
+  },
+  {
+   "file": "cord_0099.png",
+   "angle": 0.0,
+   "conf": 0.735,
+   "review": false
+  },
+  {
+   "file": "cord_0100.png",
+   "angle": 0.0,
+   "conf": 0.733,
+   "review": false
+  },
+  {
+   "file": "cord_0101.png",
+   "angle": 0.0,
+   "conf": 0.928,
+   "review": false
+  },
+  {
+   "file": "cord_0102.png",
+   "angle": 4.99,
+   "conf": 0.495,
+   "review": true
+  },
+  {
+   "file": "cord_0103.png",
+   "angle": 0.0,
+   "conf": 0.89,
+   "review": false
+  },
+  {
+   "file": "cord_0104.png",
+   "angle": 0.0,
+   "conf": 0.79,
+   "review": false
+  },
+  {
+   "file": "cord_0105.png",
+   "angle": 0.0,
+   "conf": 0.435,
+   "review": true
+  },
+  {
+   "file": "cord_0106.png",
+   "angle": 0.0,
+   "conf": 0.936,
+   "review": false
+  },
+  {
+   "file": "cord_0107.png",
+   "angle": 179.33,
+   "conf": 0.686,
+   "review": true
+  },
+  {
+   "file": "cord_0108.png",
+   "angle": 0.0,
+   "conf": 0.768,
+   "review": false
+  },
+  {
+   "file": "cord_0109.png",
+   "angle": -179.25,
+   "conf": 0.744,
+   "review": false
+  },
+  {
+   "file": "cord_0110.png",
+   "angle": -1.01,
+   "conf": 0.914,
+   "review": false
+  },
+  {
+   "file": "cord_0111.png",
+   "angle": 0.0,
+   "conf": 0.989,
+   "review": false
+  },
+  {
+   "file": "cord_0112.png",
+   "angle": 0.0,
+   "conf": 0.729,
+   "review": false
+  },
+  {
+   "file": "cord_0113.png",
+   "angle": 0.0,
+   "conf": 0.788,
+   "review": false
+  },
+  {
+   "file": "cord_0114.png",
+   "angle": -0.87,
+   "conf": 0.708,
+   "review": false
+  },
+  {
+   "file": "cord_0115.png",
+   "angle": 0.0,
+   "conf": 0.823,
+   "review": false
+  },
+  {
+   "file": "cord_0116.png",
+   "angle": -179.78,
+   "conf": 0.0,
+   "review": true
+  },
+  {
+   "file": "cord_0117.png",
+   "angle": 0.0,
+   "conf": 0.996,
+   "review": false
+  },
+  {
+   "file": "cord_0118.png",
+   "angle": -1.46,
+   "conf": 0.868,
+   "review": false
+  },
+  {
+   "file": "cord_0119.png",
+   "angle": 1.13,
+   "conf": 0.876,
+   "review": false
+  },
+  {
+   "file": "cord_0120.png",
+   "angle": 0.0,
+   "conf": 0.819,
+   "review": false
+  },
+  {
+   "file": "cord_0121.png",
+   "angle": 179.99,
+   "conf": 0.401,
+   "review": true
+  },
+  {
+   "file": "cord_0122.png",
+   "angle": -180.0,
+   "conf": 0.64,
+   "review": true
+  },
+  {
+   "file": "cord_0123.png",
+   "angle": -3.87,
+   "conf": 0.746,
+   "review": false
+  },
+  {
+   "file": "cord_0124.png",
+   "angle": 3.72,
+   "conf": 0.995,
+   "review": false
+  },
+  {
+   "file": "cord_0125.png",
+   "angle": -180.0,
+   "conf": 0.651,
+   "review": true
+  },
+  {
+   "file": "cord_0126.png",
+   "angle": -0.66,
+   "conf": 0.725,
+   "review": false
+  },
+  {
+   "file": "cord_0127.png",
+   "angle": 0.0,
+   "conf": 0.643,
+   "review": true
+  },
+  {
+   "file": "cord_0128.png",
+   "angle": 0.0,
+   "conf": 0.992,
+   "review": false
+  },
+  {
+   "file": "cord_0129.png",
+   "angle": 0.0,
+   "conf": 0.896,
+   "review": false
+  },
+  {
+   "file": "cord_0130.png",
+   "angle": 0.32,
+   "conf": 0.941,
+   "review": false
+  },
+  {
+   "file": "cord_0131.png",
+   "angle": 0.0,
+   "conf": 0.668,
+   "review": true
+  },
+  {
+   "file": "cord_0132.png",
+   "angle": 0.0,
+   "conf": 0.619,
+   "review": true
+  },
+  {
+   "file": "cord_0133.png",
+   "angle": 0.0,
+   "conf": 0.928,
+   "review": false
+  },
+  {
+   "file": "cord_0134.png",
+   "angle": 0.0,
+   "conf": 0.82,
+   "review": false
+  },
+  {
+   "file": "cord_0135.png",
+   "angle": 0.0,
+   "conf": 0.853,
+   "review": false
+  },
+  {
+   "file": "cord_0136.png",
+   "angle": -178.14,
+   "conf": 0.433,
+   "review": true
+  },
+  {
+   "file": "cord_0137.png",
+   "angle": 0.0,
+   "conf": 0.858,
+   "review": false
+  },
+  {
+   "file": "cord_0138.png",
+   "angle": -177.77,
+   "conf": 0.005,
+   "review": true
+  },
+  {
+   "file": "cord_0139.png",
+   "angle": 1.96,
+   "conf": 0.999,
+   "review": false
+  },
+  {
+   "file": "cord_0140.png",
+   "angle": 0.0,
+   "conf": 0.937,
+   "review": false
+  },
+  {
+   "file": "cord_0141.png",
+   "angle": 0.66,
+   "conf": 0.695,
+   "review": true
+  },
+  {
+   "file": "cord_0142.png",
+   "angle": -0.35,
+   "conf": 0.808,
+   "review": false
+  },
+  {
+   "file": "cord_0143.png",
+   "angle": 0.0,
+   "conf": 0.956,
+   "review": false
+  },
+  {
+   "file": "cord_0144.png",
+   "angle": 0.0,
+   "conf": 0.644,
+   "review": true
+  },
+  {
+   "file": "cord_0145.png",
+   "angle": 167.14,
+   "conf": 0.4,
+   "review": true
+  },
+  {
+   "file": "cord_0146.png",
+   "angle": -1.29,
+   "conf": 0.819,
+   "review": false
+  },
+  {
+   "file": "cord_0147.png",
+   "angle": 2.86,
+   "conf": 0.761,
+   "review": false
+  },
+  {
+   "file": "cord_0148.png",
+   "angle": 0.0,
+   "conf": 0.682,
+   "review": true
+  },
+  {
+   "file": "cord_0149.png",
+   "angle": 0.0,
+   "conf": 0.637,
+   "review": true
+  },
+  {
+   "file": "cord_0150.png",
+   "angle": -0.8,
+   "conf": 0.796,
+   "review": false
+  },
+  {
+   "file": "cord_0151.png",
+   "angle": 2.34,
+   "conf": 0.851,
+   "review": false
+  },
+  {
+   "file": "cord_0152.png",
+   "angle": 0.0,
+   "conf": 0.689,
+   "review": true
+  },
+  {
+   "file": "cord_0153.png",
+   "angle": 0.0,
+   "conf": 0.558,
+   "review": true
+  },
+  {
+   "file": "cord_0154.png",
+   "angle": -0.44,
+   "conf": 0.633,
+   "review": true
+  },
+  {
+   "file": "cord_0155.png",
+   "angle": 0.0,
+   "conf": 0.957,
+   "review": false
+  },
+  {
+   "file": "cord_0156.png",
+   "angle": 0.91,
+   "conf": 0.646,
+   "review": true
+  },
+  {
+   "file": "cord_0157.png",
+   "angle": -180.0,
+   "conf": 0.802,
+   "review": false
+  },
+  {
+   "file": "cord_0158.png",
+   "angle": -0.72,
+   "conf": 0.754,
+   "review": false
+  },
+  {
+   "file": "cord_0159.png",
+   "angle": -0.76,
+   "conf": 0.87,
+   "review": false
+  },
+  {
+   "file": "cord_0160.png",
+   "angle": -1.13,
+   "conf": 0.89,
+   "review": false
+  },
+  {
+   "file": "cord_0161.png",
+   "angle": 0.0,
+   "conf": 0.935,
+   "review": false
+  },
+  {
+   "file": "cord_0162.png",
+   "angle": 0.0,
+   "conf": 0.782,
+   "review": false
+  },
+  {
+   "file": "cord_0163.png",
+   "angle": 0.0,
+   "conf": 0.981,
+   "review": false
+  },
+  {
+   "file": "cord_0164.png",
+   "angle": 0.0,
+   "conf": 0.781,
+   "review": false
+  },
+  {
+   "file": "cord_0165.png",
+   "angle": 0.0,
+   "conf": 0.874,
+   "review": false
+  },
+  {
+   "file": "cord_0166.png",
+   "angle": -175.26,
+   "conf": 0.4,
+   "review": true
+  },
+  {
+   "file": "cord_0167.png",
+   "angle": 0.0,
+   "conf": 0.704,
+   "review": false
+  },
+  {
+   "file": "cord_0168.png",
+   "angle": 0.78,
+   "conf": 0.722,
+   "review": false
+  },
+  {
+   "file": "cord_0169.png",
+   "angle": -1.26,
+   "conf": 0.719,
+   "review": false
+  },
+  {
+   "file": "cord_0170.png",
+   "angle": -180.0,
+   "conf": 0.81,
+   "review": false
+  },
+  {
+   "file": "cord_0171.png",
+   "angle": 0.84,
+   "conf": 0.584,
+   "review": true
+  },
+  {
+   "file": "cord_0172.png",
+   "angle": 1.41,
+   "conf": 0.998,
+   "review": false
+  },
+  {
+   "file": "cord_0173.png",
+   "angle": -107.97,
+   "conf": 0.4,
+   "review": true
+  },
+  {
+   "file": "cord_0174.png",
+   "angle": 0.96,
+   "conf": 0.666,
+   "review": true
+  },
+  {
+   "file": "cord_0175.png",
+   "angle": 0.0,
+   "conf": 0.776,
+   "review": false
+  },
+  {
+   "file": "cord_0176.png",
+   "angle": 0.67,
+   "conf": 0.884,
+   "review": false
+  },
+  {
+   "file": "cord_0177.png",
+   "angle": 1.3,
+   "conf": 0.651,
+   "review": true
+  },
+  {
+   "file": "cord_0178.png",
+   "angle": 0.0,
+   "conf": 0.997,
+   "review": false
+  },
+  {
+   "file": "cord_0179.png",
+   "angle": 2.94,
+   "conf": 0.706,
+   "review": false
+  },
+  {
+   "file": "cord_0180.png",
+   "angle": -1.0,
+   "conf": 0.996,
+   "review": false
+  },
+  {
+   "file": "cord_0181.png",
+   "angle": 162.2,
+   "conf": 0.4,
+   "review": true
+  },
+  {
+   "file": "cord_0182.png",
+   "angle": 0.0,
+   "conf": 0.611,
+   "review": true
+  },
+  {
+   "file": "cord_0183.png",
+   "angle": 1.17,
+   "conf": 0.707,
+   "review": false
+  },
+  {
+   "file": "cord_0184.png",
+   "angle": 0.0,
+   "conf": 0.982,
+   "review": false
+  },
+  {
+   "file": "cord_0185.png",
+   "angle": -180.0,
+   "conf": 0.718,
+   "review": false
+  },
+  {
+   "file": "cord_0186.png",
+   "angle": 0.0,
+   "conf": 0.8,
+   "review": false
+  },
+  {
+   "file": "cord_0187.png",
+   "angle": 179.94,
+   "conf": 0.154,
+   "review": true
+  },
+  {
+   "file": "cord_0188.png",
+   "angle": 0.0,
+   "conf": 0.746,
+   "review": false
+  },
+  {
+   "file": "cord_0189.png",
+   "angle": -180.0,
+   "conf": 0.592,
+   "review": true
+  },
+  {
+   "file": "cord_0190.png",
+   "angle": -1.04,
+   "conf": 0.995,
+   "review": false
+  },
+  {
+   "file": "cord_0191.png",
+   "angle": -180.0,
+   "conf": 0.661,
+   "review": true
+  },
+  {
+   "file": "cord_0192.png",
+   "angle": -178.39,
+   "conf": 0.482,
+   "review": true
+  },
+  {
+   "file": "cord_0193.png",
+   "angle": -3.22,
+   "conf": 0.429,
+   "review": true
+  },
+  {
+   "file": "cord_0194.png",
+   "angle": 5.86,
+   "conf": 0.746,
+   "review": false
+  },
+  {
+   "file": "cord_0195.png",
+   "angle": -0.58,
+   "conf": 0.662,
+   "review": true
+  },
+  {
+   "file": "cord_0196.png",
+   "angle": -178.49,
+   "conf": 0.479,
+   "review": true
+  },
+  {
+   "file": "cord_0197.png",
+   "angle": -178.16,
+   "conf": 0.673,
+   "review": true
+  },
+  {
+   "file": "cord_0198.png",
+   "angle": 2.72,
+   "conf": 0.903,
+   "review": false
+  },
+  {
+   "file": "cord_0199.png",
+   "angle": 0.0,
+   "conf": 0.964,
+   "review": false
+  }
+ ]
+}

@@ -1,0 +1,66 @@
+{
+ "rvl_heldout/scan": {
+  "n": 300,
+  "lcnet": 6.3,
+  "own": 0.0,
+  "ens 1:1": 0.0,
+  "ens 0.5:1": 0.0,
+  "ens 1:2": 0.0
+ },
+ "rvl_heldout/photo_hard": {
+  "n": 299,
+  "lcnet": 16.4,
+  "own": 0.0,
+  "ens 1:1": 0.0,
+  "ens 0.5:1": 0.0,
+  "ens 1:2": 0.0
+ },
+ "invoices/scan": {
+  "n": 300,
+  "lcnet": 6.3,
+  "own": 4.3,
+  "ens 1:1": 1.7,
+  "ens 0.5:1": 1.7,
+  "ens 1:2": 1.7
+ },
+ "invoices/photo_hard": {
+  "n": 299,
+  "lcnet": 10.7,
+  "own": 3.0,
+  "ens 1:1": 1.0,
+  "ens 0.5:1": 1.7,
+  "ens 1:2": 1.7
+ },
+ "tobacco_cert/scan": {
+  "n": 298,
+  "lcnet": 1.0,
+  "own": 0.7,
+  "ens 1:1": 0.0,
+  "ens 0.5:1": 0.0,
+  "ens 1:2": 0.0
+ },
+ "tobacco_cert/photo_hard": {
+  "n": 300,
+  "lcnet": 2.7,
+  "own": 1.3,
+  "ens 1:1": 0.0,
+  "ens 0.5:1": 0.7,
+  "ens 1:2": 0.7
+ },
+ "az/scan": {
+  "n": 300,
+  "lcnet": 0.0,
+  "own": 0.3,
+  "ens 1:1": 0.0,
+  "ens 0.5:1": 0.0,
+  "ens 1:2": 0.0
+ },
+ "az/photo_hard": {
+  "n": 299,
+  "lcnet": 0.0,
+  "own": 0.7,
+  "ens 1:1": 0.0,
+  "ens 0.5:1": 0.3,
+  "ens 1:2": 0.3
+ }
+}

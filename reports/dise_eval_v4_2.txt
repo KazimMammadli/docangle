@@ -1,0 +1,11 @@
+test images 2800
+sign +1: ours median err 0.07  C8+L 0.23
+sign -1: ours median err 44.71  C8+L 45.92
+using sign 1 | median image width 1089.5
+docangle  n=600 median 0.07  <=1deg 94.3%  <=2deg 94.3%  >5deg 34  flips(>45) 34
+C8+L      n=600 median 0.23  <=1deg 84.0%  <=2deg 87.2%  >5deg 70  flips(>45) 55
+ours: review flagged 22 | >5deg among flagged 16 | >5deg accepted 18
+ |skew| 0-5: n=59 ours <=1deg 94.9% >5deg 3
+ |skew| 5-15: n=128 ours <=1deg 93.8% >5deg 8
+ |skew| 15-30: n=216 ours <=1deg 96.8% >5deg 7
+ |skew| 30-46: n=197 ours <=1deg 91.9% >5deg 16

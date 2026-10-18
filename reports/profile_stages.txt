@@ -1,0 +1,31 @@
+96 simulated photo pages (photo_easy, 6 pools), original sizes median 2055 px long side
+
+STAGES (single caller thread; ms per page; median / mean / p95). The two classifiers run concurrently inside _coarse; Hough runs in a thread.
+  fourier tilt (512 px)                    5.02   5.29   7.10   (n=96)
+  straighten (rotate_image_expanded)       0.68   0.73   0.95   (n=96)
+  pp-lcnet views (resize+rot)              0.25   0.29   0.39   (n=96)
+  pp-lcnet blob (LUT)                      1.47   1.66   2.86   (n=96)
+  pp-lcnet onnx run (4 views)             11.36  11.79  17.25   (n=96)
+  own views (resize 320+rot+norm)          3.07   3.07   4.74   (n=96)
+  own onnx run (2 views)                  17.26  17.34  21.79   (n=96)
+  classifiers total (_coarse)             20.80  21.26  26.02   (n=96)
+  hough line count (thread)               19.18  19.13  35.00   (n=96)
+  analyze() wall total                    30.00  31.19  38.69
+  analyze() process CPU time (all threads) 190.12 192.94 225.64
+  resize to 1000 px canvas (INTER_AREA)    1.26 mean over 95 larger pages
+
+THREAD SCALING (fresh pipeline, predict on in-memory gray pages, 2 passes over all pages):
+  1 caller threads:   33.6 pages/s  (x1.00)  CPU  189.3 ms per page, machine cores used ~ 6.4  [peak RSS so far 1399 MB]
+  2 caller threads:   41.7 pages/s  (x1.24)  CPU  203.7 ms per page, machine cores used ~ 8.5  [peak RSS so far 1399 MB]
+  4 caller threads:   45.1 pages/s  (x1.34)  CPU  215.6 ms per page, machine cores used ~ 9.7  [peak RSS so far 1399 MB]
+  6 caller threads:   43.2 pages/s  (x1.29)  CPU  224.3 ms per page, machine cores used ~ 9.7  [peak RSS so far 1399 MB]
+  8 caller threads:   41.4 pages/s  (x1.23)  CPU  227.6 ms per page, machine cores used ~ 9.4  [peak RSS so far 1399 MB]
+
+START-UP (fresh python processes, median of 3):
+  python + import docangle                           105.2 ms
+  pipeline object (no sessions yet)                    9.1 ms
+  first predict (creates 2-3 sessions) on a page     107.1 ms |    35.9 ms   (first | second predict)
+  CLI one image, wall (python -m docangle page.png)   301.4 ms
+  ONNX session creation: PP-LCNet                     75.4 ms
+  ONNX session creation: own classifier v4            93.6 ms
+  ONNX session creation: regressor                    81.9 ms

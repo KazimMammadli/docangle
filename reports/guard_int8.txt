@@ -1,0 +1,13 @@
+done az scan
+done az photo_hard
+done invoices scan
+done invoices photo_hard
+done ext_funsd scan
+done ext_funsd photo_hard
+done ext_doclaynet scan
+done ext_doclaynet photo_hard
+
+cases 400
+candidate              ms  flips  <=1deg%  <=0.5%  >5deg  same<=0.05deg%  same<=0.5deg%  better/worse by>0.25deg
+docangle             29.7      4     98.2    93.5      4           100.0          100.0            0/0
+docangle_int8        40.3     11     96.5    91.8     11            98.0           98.2            0/7

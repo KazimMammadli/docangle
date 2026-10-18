@@ -1,0 +1,13 @@
+pool           level      cases skewed>8 median|s0| | <=1deg raw % <=1deg adj % <=0.5 adj % >2deg adj >5deg adj
+az             scan         200        0       0.00 |        100.0        100.0        99.0         0         0   (adj <=1 deg 95% CI 98.1-100.0)
+az             photo_hard   200        0       0.00 |         99.5         99.5        99.0         1         1   (adj <=1 deg 95% CI 97.2-99.9)
+invoices       scan         200        2       0.00 |         94.5         98.0        77.8         3         3   (adj <=1 deg 95% CI 94.9-99.2)
+invoices       photo_hard   200        2       0.00 |         93.5         96.0        79.3         5         5   (adj <=1 deg 95% CI 92.2-97.9)
+tobacco_cert   scan         200        0       0.00 |         93.0         99.5        83.0         0         0   (adj <=1 deg 95% CI 97.2-99.9)
+tobacco_cert   photo_hard   200        0       0.00 |         92.5         99.0        83.0         0         0   (adj <=1 deg 95% CI 96.4-99.7)
+rvl_heldout    scan         200        0       0.00 |         89.5         97.0        73.5         2         1   (adj <=1 deg 95% CI 93.6-98.6)
+rvl_heldout    photo_hard   200        0       0.00 |         89.0         94.5        77.5         7         5   (adj <=1 deg 95% CI 90.4-96.9)
+ext_funsd      scan         200        0       0.00 |         91.5         98.5        76.0         0         0   (adj <=1 deg 95% CI 95.7-99.5)
+ext_funsd      photo_hard   200        0       0.00 |         91.5         97.0        72.0         1         1   (adj <=1 deg 95% CI 93.6-98.6)
+ext_doclaynet  scan         200        0       0.00 |         98.5         98.5        95.5         3         3   (adj <=1 deg 95% CI 95.7-99.5)
+ext_doclaynet  photo_hard   200        0       0.00 |         91.5         91.5        89.5        14        14   (adj <=1 deg 95% CI 86.8-94.6)

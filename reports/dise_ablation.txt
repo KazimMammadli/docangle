@@ -1,0 +1,9 @@
+-- docangle (default)
+docangle  n=600 median 0.07  <=1deg 94.3%  <=2deg 94.3%  >5deg 34  flips(>45) 34
+ours: review flagged 42 | >5deg among flagged 28 | >5deg accepted 6
+-- docangle_noreg_flag
+docangle  n=600 median 0.07  <=1deg 95.2%  <=2deg 95.2%  >5deg 29  flips(>45) 29
+ours: review flagged 42 | >5deg among flagged 23 | >5deg accepted 6
+-- docangle_lc2or1
+docangle  n=600 median 0.07  <=1deg 94.7%  <=2deg 94.7%  >5deg 32  flips(>45) 32
+ours: review flagged 43 | >5deg among flagged 27 | >5deg accepted 5

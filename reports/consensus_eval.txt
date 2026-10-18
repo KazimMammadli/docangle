@@ -1,0 +1,23 @@
+consensus eps=0.05; flip = error > 45 deg; accepted = not needs_review
+az             photo_easy clean  (real documents, 5 jobs, 100 pages): flips   0 ->   0 | accepted flips   0 ->   0 | review   0 ->   0
+az             photo_easy mixed  (real documents, 5 jobs, 100 pages): flips   0 ->   0 | accepted flips   0 ->   0 | review   0 ->   5 | odd pages 5: still correct 5, flipped BY the consensus 0, sent to review 5
+az             photo_hard clean  (real documents, 5 jobs, 100 pages): flips   0 ->   0 | accepted flips   0 ->   0 | review   0 ->   0
+az             photo_hard mixed  (real documents, 5 jobs, 100 pages): flips   0 ->   0 | accepted flips   0 ->   0 | review   1 ->   5 | odd pages 5: still correct 5, flipped BY the consensus 0, sent to review 5
+invoices       photo_easy clean  (pseudo-jobs of 10, 10 jobs, 100 pages): flips   1 ->   1 | accepted flips   1 ->   0 | review   2 ->   1
+invoices       photo_easy mixed  (pseudo-jobs of 10, 10 jobs, 100 pages): flips   1 ->   1 | accepted flips   1 ->   0 | review   2 ->  11 | odd pages 10: still correct 10, flipped BY the consensus 0, sent to review 10
+invoices       photo_hard clean  (pseudo-jobs of 10, 10 jobs, 100 pages): flips   1 ->   1 | accepted flips   1 ->   0 | review   1 ->   1
+invoices       photo_hard mixed  (pseudo-jobs of 10, 10 jobs, 100 pages): flips   1 ->   1 | accepted flips   1 ->   0 | review   1 ->  11 | odd pages 10: still correct 10, flipped BY the consensus 0, sent to review 10
+rvl_heldout    photo_easy clean  (pseudo-jobs of 10, 10 jobs, 100 pages): flips   1 ->   0 | accepted flips   0 ->   0 | review   2 ->   1
+rvl_heldout    photo_easy mixed  (pseudo-jobs of 10, 10 jobs, 100 pages): flips   1 ->   0 | accepted flips   0 ->   0 | review   2 ->  11 | odd pages 10: still correct 10, flipped BY the consensus 0, sent to review 10
+rvl_heldout    photo_hard clean  (pseudo-jobs of 10, 10 jobs, 100 pages): flips   0 ->   0 | accepted flips   0 ->   0 | review   4 ->   0
+rvl_heldout    photo_hard mixed  (pseudo-jobs of 10, 10 jobs, 100 pages): flips   0 ->   1 | accepted flips   0 ->   0 | review   4 ->  10 | odd pages 10: still correct 9, flipped BY the consensus 1, sent to review 10
+ext_doclaynet  photo_easy clean  (pseudo-jobs of 10, 10 jobs, 100 pages): flips   2 ->   0 | accepted flips   1 ->   0 | review   3 ->   2
+ext_doclaynet  photo_easy mixed  (pseudo-jobs of 10, 10 jobs, 100 pages): flips   2 ->   0 | accepted flips   1 ->   0 | review   3 ->  12 | odd pages 10: still correct 10, flipped BY the consensus 0, sent to review 10
+ext_doclaynet  photo_hard clean  (pseudo-jobs of 10, 10 jobs, 100 pages): flips   0 ->   0 | accepted flips   0 ->   0 | review   0 ->   0
+ext_doclaynet  photo_hard mixed  (pseudo-jobs of 10, 10 jobs, 100 pages): flips   0 ->   0 | accepted flips   0 ->   0 | review   0 ->  10 | odd pages 10: still correct 10, flipped BY the consensus 0, sent to review 10
+ext_cord       photo_easy clean  (pseudo-jobs of 10, 10 jobs, 100 pages): flips   0 ->   0 | accepted flips   0 ->   0 | review   5 ->   0
+ext_cord       photo_easy mixed  (pseudo-jobs of 10, 10 jobs, 100 pages): flips   0 ->   1 | accepted flips   0 ->   0 | review   5 ->  10 | odd pages 10: still correct 9, flipped BY the consensus 1, sent to review 10
+ext_cord       photo_hard clean  (pseudo-jobs of 10, 10 jobs, 100 pages): flips   1 ->   0 | accepted flips   0 ->   0 | review   6 ->   1
+ext_cord       photo_hard mixed  (pseudo-jobs of 10, 10 jobs, 100 pages): flips   1 ->   1 | accepted flips   0 ->   0 | review   6 ->  11 | odd pages 10: still correct 9, flipped BY the consensus 1, sent to review 10
+TOTAL clean  pages 1000: flips 6 -> 2 | accepted flips 3 -> 0 | review 23 -> 6
+TOTAL mixed  pages 1000: flips 6 -> 5 | accepted flips 3 -> 0 | review 24 -> 96 | odd 90: correct after 87, flipped by consensus 3, reviewed 90

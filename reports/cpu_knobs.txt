@@ -1,0 +1,7 @@
+100 simulated photo pages; single caller thread: median wall / CPU ms per page; 4 caller threads: pages/s, CPU ms per page, cores busy
+variant                                            wall     CPU | 4 thr p/s CPU/page cores | identical results
+default                                            28.8   186.3 |      38.5    240.5   9.3 | 96/96
+ORT no spinning                                    29.7   156.5 |      32.9    244.8   8.0 | 96/96
+OpenCV 1 thread                                    35.4   133.6 |      44.5    167.4   7.5 | 96/96
+ORT no spinning + OpenCV 1 thread                  35.9    85.8 |      45.3    156.5   7.1 | 96/96
+no spinning + OpenCV 1 + ORT 1 thread/session      43.1    76.2 |      47.7    113.9   5.4 | 96/96

@@ -1,0 +1,9 @@
+SmartDoc frames: 461 (every 25th of 150 clips), rot90=False, crop=None; error = circular difference to the page-edge GT
+docangle             n=461 median  1.52 deg | <=1  41.4 % <=2  59.4 % <=5  82.9 % | flips(>45)  34 (7.4 %) | review 25.8 % accepted flips 1 | ms 31
+docangle_crop        n=461 median  0.48 deg | <=1  72.9 % <=2  82.4 % <=5  92.0 % | flips(>45)  18 (3.9 %) | review 15.0 % accepted flips 0 | ms 32
+   docangle by type datasheet n= 99 <=2  55.6 % flips 3
+   docangle by type letter    n= 60 <=2  70.0 % flips 1
+   docangle by type magazine  n= 92 <=2  63.0 % flips 15
+   docangle by type paper     n= 60 <=2  50.0 % flips 2
+   docangle by type patent    n= 91 <=2  57.1 % flips 9
+   docangle by type tax       n= 59 <=2  62.7 % flips 4

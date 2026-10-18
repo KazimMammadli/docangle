@@ -1,0 +1,36 @@
+
+=== paddle_v6_medium_gpu ===
+condition                       0      5     15     30     45     90    135    180    270    mean
+linear (word F1 %)           99.3   99.0   98.9   99.2   99.2   99.4   99.1   98.7   99.3    99.1
+hq (word F1 %)               99.3   98.9   98.7   98.9   99.2   99.3   99.2   99.3   99.3    99.1
+linear (CER %)                1.9    2.0    2.1    2.0    2.1    1.9    2.1    2.0    1.9     2.0
+hq (CER %)                    1.9    2.1    2.1    2.1    2.0    1.9    2.0    1.9    1.9     2.0
+linear (sharpness kept %)      88     43     46     48     47     88     47     34     88      59
+hq (sharpness kept %)         100     62     66     68     65    100     66    100    100      81
+original page, untouched   word F1 99.3 %  CER 1.9 %
+paired over pages (page-bootstrap 95 % interval), word F1 points:
+  hq - linear   page already upright (0)    +0.02  [+0.00, +0.07]   pages better/worse 1/0 of 12
+  hq - linear   quarter turns 90/180/270    +0.16  [+0.01, +0.30]   pages better/worse 6/1 of 12
+  hq - linear   tilts 5/15/30/45            -0.17  [-0.37, +0.03]   pages better/worse 3/8 of 12
+  hq - linear   quarter turn + 45 (135)     +0.17  [+0.01, +0.38]   pages better/worse 4/1 of 12
+  hq - linear   all angles                  -0.00  [-0.11, +0.10]   pages better/worse 4/3 of 12
+  linear - untouched page, all angles   -0.17  [-0.37, +0.03]   pages better/worse 2/7 of 12
+  hq     - untouched page, all angles   -0.17  [-0.32, -0.04]   pages better/worse 2/7 of 12
+
+=== tesseract ===
+condition                       0      5     15     30     45     90    135    180    270    mean
+linear (word F1 %)           96.4   97.7   97.7   97.7   97.3   96.4   97.3   97.7   96.4    97.2
+hq (word F1 %)               96.4   97.7   96.9   97.6   97.4   96.4   97.5   96.4   96.4    97.0
+linear (CER %)               12.4   11.9   12.0   12.0   12.1   12.4   12.0   12.0   12.4    12.1
+hq (CER %)                   12.4   12.0   12.1   12.0   12.0   12.4   12.1   12.4   12.4    12.2
+linear (sharpness kept %)      88     43     46     48     47     88     47     34     88      59
+hq (sharpness kept %)         100     62     66     68     65    100     66    100    100      81
+original page, untouched   word F1 96.4 %  CER 12.4 %
+paired over pages (page-bootstrap 95 % interval), word F1 points:
+  hq - linear   page already upright (0)    -0.05  [-0.15, +0.00]   pages better/worse 0/1 of 12
+  hq - linear   quarter turns 90/180/270    -0.46  [-1.13, -0.06]   pages better/worse 0/6 of 12
+  hq - linear   tilts 5/15/30/45            -0.20  [-0.43, -0.00]   pages better/worse 3/7 of 12
+  hq - linear   quarter turn + 45 (135)     +0.16  [-0.48, +1.04]   pages better/worse 3/4 of 12
+  hq - linear   all angles                  -0.23  [-0.48, -0.05]   pages better/worse 1/8 of 12
+  linear - untouched page, all angles   +0.81  [+0.10, +1.94]   pages better/worse 7/1 of 12
+  hq     - untouched page, all angles   +0.58  [+0.05, +1.48]   pages better/worse 7/1 of 12

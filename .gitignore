@@ -1,0 +1,13 @@
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/
+data/splits/train/
+data/splits/val/
+data/splits/test/
+*.zip
+*.tar.gz
+data/cache/
+data/external/
+*.egg-info/
+models/experimental/

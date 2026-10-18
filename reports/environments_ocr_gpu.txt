@@ -1,0 +1,5 @@
+Environments of the OCR study (chapter 7) and the GPU measurements (chapter 8.4): versions read on 2026-10-19 from the interpreters that ran them (not recorded at the time of the runs)
+ocrtest: python 3.11.16 | onnxruntime 1.19.2 | providers TensorrtExecutionProvider,CUDAExecutionProvider,CPUExecutionProvider
+paddlegpu: python 3.11.16 | onnxruntime 1.19.2 | providers TensorrtExecutionProvider,CUDAExecutionProvider,CPUExecutionProvider
+ortgpu: python 3.11.16 | onnxruntime 1.19.2 | providers TensorrtExecutionProvider,CUDAExecutionProvider,CPUExecutionProvider
+tesseract: tesseract 5.5.3

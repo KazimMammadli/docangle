@@ -1,0 +1,50 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "docangle"
+version = "4.4.0"
+description = "Document rotation angle and page orientation for Latin-script documents"
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.10"
+keywords = ["document analysis", "page orientation", "skew", "OCR preprocessing"]
+classifiers = [
+  "License :: OSI Approved :: MIT License",
+  "Intended Audience :: Developers",
+  "Topic :: Scientific/Engineering :: Image Recognition",
+  "Programming Language :: Python :: 3",
+]
+dependencies = [
+  "numpy>=1.23,<2.4",
+  "opencv-python-headless>=4.8,<5",   # 5.x changes HoughLinesP output shape; code handles it but is untested on 5.x
+  "onnxruntime>=1.16",
+]
+
+[project.optional-dependencies]
+pdf = ["pypdfium2>=4"]                   # PDF input (BSD-3 / Apache-2.0)
+train = ["torch>=2.0", "torchvision>=0.15", "tqdm", "datasets", "scikit-learn", "Pillow"]
+bench = ["Pillow", "docorient"]            # the comparison harness (docs/05, 12.5); Tesseract itself is a program, see docs/12
+dev = ["pytest>=7", "ruff"]
+
+[project.urls]
+Documentation = "https://github.com/KazimMammadli/docangle/tree/main/docs"
+Repository = "https://github.com/KazimMammadli/docangle"
+Changelog = "https://github.com/KazimMammadli/docangle/blob/main/CHANGELOG.md"
+
+[project.scripts]
+docangle = "docangle.__main__:main"
+
+[tool.setuptools]
+packages = ["docangle"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests/unit"]
+markers = ["data: needs local benchmark images under data/"]
+
+[tool.ruff]
+line-length = 110
+
+[tool.ruff.lint]
+select = ["E9", "F"]     # syntax errors and pyflakes (unused names, undefined names); the dense research scripts are not style-linted

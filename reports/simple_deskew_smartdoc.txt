@@ -1,0 +1,3 @@
+SmartDoc REAL phone frames, document cropped, 926 frames (150 clips); tilt error modulo 90 deg against the page-edge GT
+  textbook minAreaRect     <=1 deg  12.4%  <=2 deg  22.6%  >5 deg  44.6%  >10 deg  11.3%  median  4.37
+  docangle Fourier tilt    <=1 deg  76.6%  <=2 deg  86.3%  >5 deg   5.9%  >10 deg   2.3%  median  0.40

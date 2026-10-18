@@ -1,0 +1,6 @@
+# Inference only. Training / test / comparison extras: pip install -e ".[train,dev,bench]"
+numpy>=1.23,<2.4
+opencv-python-headless>=4.8,<5
+onnxruntime>=1.16
+# optional: PDF input
+# pypdfium2>=4

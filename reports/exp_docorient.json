@@ -1,0 +1,66 @@
+{
+ "invoices/scan": {
+  "n": 150,
+  "docorient": 26.7,
+  "pp-lcnet(tta)": 7.3,
+  "own v3(tta)": 4.0,
+  "ens(ours)": 1.3,
+  "docorient_ms": 28.4
+ },
+ "invoices/photo_hard": {
+  "n": 148,
+  "docorient": 48.0,
+  "pp-lcnet(tta)": 13.5,
+  "own v3(tta)": 2.7,
+  "ens(ours)": 0.7,
+  "docorient_ms": 27.9
+ },
+ "rvl_heldout/scan": {
+  "n": 150,
+  "docorient": 27.3,
+  "pp-lcnet(tta)": 10.7,
+  "own v3(tta)": 0.0,
+  "ens(ours)": 0.7,
+  "docorient_ms": 27.6
+ },
+ "rvl_heldout/photo_hard": {
+  "n": 149,
+  "docorient": 44.3,
+  "pp-lcnet(tta)": 12.1,
+  "own v3(tta)": 0.0,
+  "ens(ours)": 0.0,
+  "docorient_ms": 27.3
+ },
+ "tobacco_cert/scan": {
+  "n": 150,
+  "docorient": 7.3,
+  "pp-lcnet(tta)": 0.0,
+  "own v3(tta)": 0.0,
+  "ens(ours)": 0.0,
+  "docorient_ms": 27.7
+ },
+ "tobacco_cert/photo_hard": {
+  "n": 150,
+  "docorient": 20.7,
+  "pp-lcnet(tta)": 3.3,
+  "own v3(tta)": 0.7,
+  "ens(ours)": 0.7,
+  "docorient_ms": 27.7
+ },
+ "az/scan": {
+  "n": 150,
+  "docorient": 10.7,
+  "pp-lcnet(tta)": 0.0,
+  "own v3(tta)": 0.0,
+  "ens(ours)": 0.0,
+  "docorient_ms": 27.1
+ },
+ "az/photo_hard": {
+  "n": 150,
+  "docorient": 40.7,
+  "pp-lcnet(tta)": 1.3,
+  "own v3(tta)": 0.7,
+  "ens(ours)": 0.0,
+  "docorient_ms": 26.6
+ }
+}

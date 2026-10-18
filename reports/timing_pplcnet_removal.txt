@@ -1,0 +1,9 @@
+300 pages x 3 reps, 1000-px gray canvases, single caller thread, analyze() only
+docangle                 mean  34.19 ms  median  29.93  p95  52.26
+docangle_ownonly         mean  30.95 ms  median  25.78  p95  50.23
+docangle_or1             mean  30.14 ms  median  26.35  p95  50.97
+docangle_min             mean  27.45 ms  median  24.46  p95  49.07
+docangle                 throughput with 4 workers:  47.1 pages/s
+docangle_ownonly         throughput with 4 workers:  56.1 pages/s
+docangle_or1             throughput with 4 workers:  61.7 pages/s
+docangle_min             throughput with 4 workers:  76.6 pages/s

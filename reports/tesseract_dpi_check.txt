@@ -1,0 +1,7 @@
+Tesseract OSD on 160 exact quarter turns (az, invoices, ext_funsd, ext_doclaynet, ext_cord, 8 pages each); the program warned about the missing resolution in 160 of them
+
+| variant | right | wrong | no answer | answers different from the default |
+|---|---|---|---|---|
+| as in the comparison (no --dpi) | 103 | 23 | 34 | 0 |
+| --dpi 150 | 103 | 23 | 34 | 0 |
+| --dpi 300 | 103 | 23 | 34 | 0 |

@@ -1,0 +1,46 @@
+cases 6291 (primary 3591), pages 1357, flips 73, errors>5deg 94, current review 304 (4.8 %)
+
+== 1. fusion of the two voters (NLL of the true quadrant; argmax flips among non-ambiguous cases)
+  1:1 (current)  NLL 0.0170  quadrant errors 25
+  lcnet only     NLL 0.2777  quadrant errors 382
+  own only       NLL 0.0574  quadrant errors 36
+  best grid     NLL 0.0129  w_lcnet 0.75 w_own 0.75 T 0.5  quadrant errors 25  (in-sample, 3 parameters)
+
+== 2. review score (5-fold, page-disjoint): accepted flips / accepted errors>5deg at the SAME review rate as the current rule
+  model target=flip       primary pools    review  1.2 %  current rule: acc.flips   3 acc.>5deg  13 | learned: acc.flips   0 acc.>5deg  10   (n=3591, flips 12, >5deg 25)
+  model target=flip       external pools review  9.7 %  current rule: acc.flips  10 acc.>5deg  12 | learned: acc.flips   3 acc.>5deg   6   (n=2700, flips 61, >5deg 69)
+  model target=flip       all            review  4.8 %  current rule: acc.flips  13 acc.>5deg  25 | learned: acc.flips   3 acc.>5deg  17   (n=6291, flips 73, >5deg 94)
+  risk-coverage (all pools): review rate -> accepted flips, current vs learned[flip]
+        1 %   current  25/ 39   learned  23/ 41   (accepted flips / accepted >5deg)
+        2 %   current  18/ 31   learned   9/ 26   (accepted flips / accepted >5deg)
+        5 %   current  13/ 24   learned   3/ 17   (accepted flips / accepted >5deg)
+       10 %   current   8/ 19   learned   0/ 11   (accepted flips / accepted >5deg)
+       20 %   current   2/ 11   learned   0/ 10   (accepted flips / accepted >5deg)
+  model target=error>5deg primary pools    review  1.2 %  current rule: acc.flips   3 acc.>5deg  13 | learned: acc.flips   1 acc.>5deg  11   (n=3591, flips 12, >5deg 25)
+  model target=error>5deg external pools review  9.7 %  current rule: acc.flips  10 acc.>5deg  12 | learned: acc.flips   3 acc.>5deg   5   (n=2700, flips 61, >5deg 69)
+  model target=error>5deg all            review  4.8 %  current rule: acc.flips  13 acc.>5deg  25 | learned: acc.flips   4 acc.>5deg  16   (n=6291, flips 73, >5deg 94)
+  risk-coverage (all pools): review rate -> accepted flips, current vs learned[error>5deg]
+        1 %   current  25/ 39   learned  22/ 38   (accepted flips / accepted >5deg)
+        2 %   current  18/ 31   learned  10/ 23   (accepted flips / accepted >5deg)
+        5 %   current  13/ 24   learned   3/ 15   (accepted flips / accepted >5deg)
+       10 %   current   8/ 19   learned   3/ 15   (accepted flips / accepted >5deg)
+       20 %   current   2/ 11   learned   0/ 11   (accepted flips / accepted >5deg)
+== 3. leave-one-POOL-out (train on the other pools, score the held-out pool; target = flip) at the pool's current review rate
+  az             n= 900 flips  0 review  0.2 %  acc.flips current  0 learned  0 | acc.>5deg current  0 learned  0
+  ext_cord       n= 900 flips 33 review 23.9 %  acc.flips current  2 learned  2 | acc.>5deg current  4 learned  6
+  ext_doclaynet  n= 900 flips 28 review  4.4 %  acc.flips current  8 learned  3 | acc.>5deg current  8 learned  3
+  invoices       n= 891 flips  6 review  2.4 %  acc.flips current  2 learned  0 | acc.>5deg current 10 learned  8
+  rvl_heldout    n= 900 flips  6 review  1.8 %  acc.flips current  1 learned  0 | acc.>5deg current  1 learned  0
+  tobacco_cert   n= 900 flips  0 review  0.4 %  acc.flips current  0 learned  0 | acc.>5deg current  2 learned  2
+  total accepted flips over pools with errors: current 13, learned 5
+
+== 4. coefficients (standardised features, fitted on all cases; target = flip)
+  lcnet_top_logit  +1 sd -> mean risk x0.15
+  margin_logit     +1 sd -> mean risk x0.27
+  lcnet_max_logit  +1 sd -> mean risk x1.03
+  own_max_logit    +1 sd -> mean risk x1.12
+  voters_agree     +1 sd -> mean risk x1.24
+  log1p_lines      +1 sd -> mean risk x1.60
+  lines_term       +1 sd -> mean risk x0.65
+  hough_fft_gap    +1 sd -> mean risk x0.98
+  fallback         +1 sd -> mean risk x0.67

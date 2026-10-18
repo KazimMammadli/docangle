@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "If you use docangle or the comparison in docs/05-comparison.md, please cite it as below and name the version and the commit."
+title: "docangle: document page orientation and skew estimation"
+type: software
+version: 4.4.0
+date-released: 2026-10-18
+license: MIT
+authors:
+  - name: "Kazim Mammadli"
+repository-code: "https://github.com/KazimMammadli/docangle"
+abstract: >-
+  An open-source estimator of the rotation of a scanned or photographed Latin-script document page
+  (angle in [-180, 180] degrees, confidence and a review flag), a controlled benchmark against other
+  open-source orientation and skew tools, and a complete record of its design and evaluation.
+keywords:
+  - document analysis
+  - page orientation
+  - skew estimation
+  - OCR preprocessing
