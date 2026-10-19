@@ -12,6 +12,7 @@ Stored results behind every number in the [README](../README.md) and the [book](
 | [benchmark/RESULTS.md](benchmark/RESULTS.md) | comparison with other open-source tools (ch. 5) |
 | [FINAL_REPORT.md](FINAL_REPORT.md) | lab notebook: how each version was derived, decisions and rejected ideas |
 | [METHOD_RESEARCH.md](METHOD_RESEARCH.md) | survey notes on other methods and tools |
+| [readme_example.txt](readme_example.txt) | command and output behind the before/after figure of the README |
 
 `bench_*.json` files hold the raw per-cell results of `bench.run`. The runner also writes a Markdown twin; the twins are not stored because the JSON rebuilds them byte for byte:
 
