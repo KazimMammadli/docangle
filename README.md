@@ -103,22 +103,38 @@ python -m tools.ocr_pipeline scan.pdf --out out/  # PDF to angle to upright page
 
 ```mermaid
 flowchart TD
-    A["Image file, PDF page or numpy array"] --> B["Decode to a grey canvas<br/>long side ≤ 1000 px"]
-    B -->|blank or too small| X["NO_CONTENT / IMAGE_TOO_SMALL<br/>sent to review"]
-    B --> H["Hough lines, in parallel<br/>counts text lines only"]
-    B --> T["① Fine tilt: 2-D Fourier transform<br/>tilt in [-45°, 45°)"]
-    T --> S["② Straighten by −tilt"]
-    S --> L["PP-LCNet<br/>4 rotated views"]
-    S --> O["Own MobileNetV3<br/>0° and 180° views"]
-    L --> Q["③ Sum of log-posteriors<br/>quadrant 0 / 90 / 180 / 270"]
-    O --> Q
-    Q -->|"unsure: score < 0.60, or tilt beyond ±25° and score < 0.88"| F["④ 360° regressor<br/>may override, confidence − 0.30"]
-    Q --> D["⑤ angle = quadrant + tilt, in [-180°, 180°]"]
-    F --> D
-    D --> R["angle · confidence · needs_review"]
-    H -->|text line count| R
-    R -.- N["needs_review when confidence < 0.90,<br/>fewer than 8 text lines, or unreadable"]
+    IN(["image · PDF page · array"]) --> DEC["Decode<br/>grey canvas ≤ 1000 px"]
+    DEC --> TILT["<b>① Fine tilt</b><br/>2-D Fourier transform<br/>angle within ±45°"]
+    DEC -.-> LINES["Hough lines<br/>text-line count"]
+    TILT --> STR["<b>② Straighten</b><br/>rotate by −tilt"]
+    subgraph Q["③ Quadrant: two classifiers vote"]
+        direction LR
+        LC["PP-LCNet<br/>4 rotated views"]
+        OWN["Own MobileNetV3<br/>2 rotated views"]
+        LC ~~~ OWN
+    end
+    STR --> Q
+    Q --> SUM["Sum of log-posteriors<br/>0° · 90° · 180° · 270°"]
+    SUM -- confident --> ANG["<b>⑤ angle = quadrant + tilt</b><br/>−180° … +180°"]
+    SUM -. unsure .-> REG["<b>④ Fallback</b><br/>360° regressor"]
+    REG -.-> ANG
+    ANG --> OUT(["angle · confidence · needs_review"])
+    LINES -.-> OUT
+
+    classDef io fill:#2563eb,stroke:#1d4ed8,color:#ffffff
+    classDef step fill:#f1f5f9,stroke:#64748b,color:#0f172a
+    classDef dsp fill:#dcfce7,stroke:#16a34a,color:#14532d
+    classDef nn fill:#ffedd5,stroke:#ea580c,color:#7c2d12
+    classDef rare fill:#f8fafc,stroke:#94a3b8,color:#475569,stroke-dasharray:5 4
+    class IN,OUT io
+    class DEC,STR,SUM,ANG step
+    class TILT,LINES dsp
+    class LC,OWN nn
+    class REG rare
+    style Q fill:#fff7ed,stroke:#fdba74,color:#7c2d12
 ```
+
+Green: signal processing, no learned model. Orange: neural networks. Dashed: side paths (the rare fallback; the line count only feeds the review flag). `needs_review` is set when the confidence is below 0.90, the page has fewer than 8 text lines, or it is blank or unreadable.
 
 Chapter 2 gives the formulas and the reasons, chapter 11 every idea that was tried and rejected.
 
