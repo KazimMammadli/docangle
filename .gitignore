@@ -11,3 +11,14 @@ data/cache/
 data/external/
 *.egg-info/
 models/experimental/
+build/
+dist/
+.ruff_cache/
+.mypy_cache/
+.ipynb_checkpoints/
+*.log
+.env
+.env.*
+.vscode/
+.idea/
+.DS_Store

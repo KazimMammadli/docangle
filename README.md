@@ -76,6 +76,13 @@ pip install -e ".[pdf]"     # + pypdfium2 for PDF input
 
 Not on PyPI: the models are part of the repository, so install from a clone.
 
+Tests and checks (the same as continuous integration):
+
+```bash
+pip install -e ".[dev,pdf]"
+pytest -q && ruff check . && python -m tools.gen_config_doc --check && python -m tools.check_links
+```
+
 Python 3.10 or newer (continuous integration runs 3.10 and 3.12; the accuracy, comparison and CPU speed measurements used 3.14; the OCR study and the GPU measurements ran in separate environments (`reports/environments_ocr_gpu.txt`) with Python 3.11.16, onnxruntime-gpu 1.19.2, PaddleOCR 3.7, EasyOCR 1.7.2 and Tesseract 5.5.3). Models are read from `models/` (see [`models/README.md`](models/README.md) for what is included and under which terms); `DOCANGLE_MODELS_DIR` points elsewhere. A GPU is optional (`PipelineConfig(ort_provider="cuda")`).
 
 ## Command line
@@ -120,6 +127,7 @@ models/     ONNX models and manifest (checksums, provenance, terms)
 bench/      photo simulator, metrics with page-level intervals, runner, accuracy guard, the open-source comparison, OCR experiments (index: bench/README.md)
 tools/      label_server (browser labelling), first_look (label-free look at real photos), ocr_pipeline (angle + OCR in one command)
 src/        data preparation, label audit, training and export of the own classifier
+data/       download script for the public pools, a pool list, generated page backgrounds (see data/README.md)
 tests/      unit tests (those that need benchmark pages skip themselves when data/ is absent)
 docs/       the book
 reports/    stored results with commit, configuration and versions (index: reports/README.md)
