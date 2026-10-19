@@ -78,7 +78,7 @@ Quad-tilt mode (a random quadrant plus up to ±25° tilt — closer to "tilted d
 
 These are outside the primary use (receipts are narrow, blurred and sparse; many DocLayNet pages are photos/figures/title pages), and
 they show where the system is weaker: ~3–4 % flips, mostly caught by review. Before the real-photo data was added to the classifier
-(v3), CORD flips were 32.5 % (photo_hard, 14.9 % accepted); after (v4) 4.5 % with **0 %** accepted (`reports/bench_step8_v3_vs_v4.md`).
+(v3), CORD flips were 32.5 % (photo_hard, 14.9 % accepted); after (v4) 4.5 % with **0 %** accepted (`reports/bench_step8_v3_vs_v4.json`).
 For such material raise `review_confidence` (at 0.85 the accepted flips on these pools fall from 0.50 % to 0.25 %, coverage 76 %).
 
 ### 4.3 Confidence → review (primary pools, pooled over levels)

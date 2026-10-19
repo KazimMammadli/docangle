@@ -117,12 +117,12 @@ The day-by-day lab notebook behind the book is [`reports/FINAL_REPORT.md`](repor
 ```
 docangle/   the library: pipeline, Fourier tilt, classifier and regressor wrappers, consensus, document finder, PDF, CLI
 models/     ONNX models and manifest (checksums, provenance, terms)
-bench/      photo simulator, metrics with page-level intervals, runner, accuracy guard, the open-source comparison, OCR experiments
+bench/      photo simulator, metrics with page-level intervals, runner, accuracy guard, the open-source comparison, OCR experiments (index: bench/README.md)
 tools/      label_server (browser labelling), first_look (label-free look at real photos), ocr_pipeline (angle + OCR in one command)
 src/        data preparation, label audit, training and export of the own classifier
 tests/      unit tests (those that need benchmark pages skip themselves when data/ is absent)
 docs/       the book
-reports/    stored results with commit, configuration and versions
+reports/    stored results with commit, configuration and versions (index: reports/README.md)
 ```
 
 ## Contributing, citing, licence

@@ -17,7 +17,7 @@ import sys
 import unicodedata
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-TOP = ["README.md", "CONTRIBUTING.md", "CHANGELOG.md", "NOTICE.md", "MODEL_CARD.md", "models/README.md", "data/README.md"]
+TOP = ["README.md", "CONTRIBUTING.md", "CHANGELOG.md", "NOTICE.md", "MODEL_CARD.md", "models/README.md", "data/README.md", "bench/README.md", "reports/README.md"]
 CODE_PATH = re.compile(r"`((?:reports|bench|tools|src|docs|models|data|tests|docangle)/[A-Za-z0-9_./-]+)`")
 RUNTIME_DIRS = ("data/cache", "data/external", "data/splits", "data/az_test_pages", "data/invoices_rvl_certified", "data/invoices_rvl_test",
                 "models/experimental", "models/checkpoints", "reports/failures")
