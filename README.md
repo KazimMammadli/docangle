@@ -101,13 +101,23 @@ python -m tools.ocr_pipeline scan.pdf --out out/  # PDF to angle to upright page
 
 ## How it works
 
-```
-decode → grey canvas ≤ 1000 px
- ① fine tilt: Fourier radial projection (training-free, ~5 ms)
- ② straighten
- ③ quadrant: PP-LCNet (4 rotated views) + own MobileNetV3 (2 views), log-posteriors summed
- ④ rare fallback: a 360° regressor, only when the classifiers are unsure
- ⑤ angle = quadrant + tilt;  confidence = posterior of the quadrant;  review = confidence < 0.90, too few text lines, or unreadable
+```mermaid
+flowchart TD
+    A["Image file, PDF page or numpy array"] --> B["Decode to a grey canvas<br/>long side ≤ 1000 px"]
+    B -->|blank or too small| X["NO_CONTENT / IMAGE_TOO_SMALL<br/>sent to review"]
+    B --> H["Hough lines, in parallel<br/>counts text lines only"]
+    B --> T["① Fine tilt: 2-D Fourier transform<br/>tilt in [-45°, 45°)"]
+    T --> S["② Straighten by −tilt"]
+    S --> L["PP-LCNet<br/>4 rotated views"]
+    S --> O["Own MobileNetV3<br/>0° and 180° views"]
+    L --> Q["③ Sum of log-posteriors<br/>quadrant 0 / 90 / 180 / 270"]
+    O --> Q
+    Q -->|"unsure: score < 0.60, or tilt beyond ±25° and score < 0.88"| F["④ 360° regressor<br/>may override, confidence − 0.30"]
+    Q --> D["⑤ angle = quadrant + tilt, in [-180°, 180°]"]
+    F --> D
+    D --> R["angle · confidence · needs_review"]
+    H -->|text line count| R
+    R -.- N["needs_review when confidence < 0.90,<br/>fewer than 8 text lines, or unreadable"]
 ```
 
 Chapter 2 gives the formulas and the reasons, chapter 11 every idea that was tried and rejected.
