@@ -4,9 +4,9 @@
 
 **How is this page turned?** `docangle` finds the rotation of a scanned or photographed Latin-script document, anywhere in [-180°, +180°], and tells you when it is not sure. It is a pre-processing step for OCR and archiving pipelines.
 
-![Left: a phone photo of a printed page turned by about 30 degrees. Right: the output of docangle, the same page upright.](docs/images/before_after.jpg)
+![Left: a phone photo of a printed page turned by about 30 degrees. Right: the output of docangle, the same page upright.](docs/images/before_after.webp)
 
-*One phone photo of a printed page, not a benchmark: `python -m docangle photo.jpg -o upright.jpg` gave angle −30.4°, confidence 0.999, `needs_review` false ([`reports/readme_example.txt`](reports/readme_example.txt)). The white corners belong to the output: the turned image is not cropped.*
+*One phone photo of a printed page, not a benchmark: `python -m docangle photo.jpg -o upright.jpg` gave angle −30.4°, confidence 0.999, `needs_review` false ([`reports/readme_example.txt`](reports/readme_example.txt)). Both images are cropped to the page for display; the output itself keeps the whole turned frame.*
 
 ```python
 from docangle import get_pipeline
