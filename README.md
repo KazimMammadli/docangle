@@ -88,6 +88,19 @@ pytest -q && ruff check . && python -m tools.gen_config_doc --check && python -m
 
 Python 3.10 or newer (continuous integration runs 3.10 and 3.12; the accuracy, comparison and CPU speed measurements used 3.14; the OCR study and the GPU measurements ran in separate environments (`reports/environments_ocr_gpu.txt`) with Python 3.11.16, onnxruntime-gpu 1.19.2, PaddleOCR 3.7, EasyOCR 1.7.2 and Tesseract 5.5.3). Models are read from `DOCANGLE_MODELS_DIR` if set, else `models/`, else the cache (see [`models/README.md`](models/README.md) for what is included and under which terms); `DOCANGLE_MODELS_DIR` points elsewhere and is never downloaded into. A GPU is optional (`PipelineConfig(ort_provider="cuda")`).
 
+## Quick start
+
+```python
+import docangle
+
+r = docangle.predict_document("page.jpg")      # a file path or a NumPy image
+print(r.angle, r.confidence, r.needs_review)   # e.g. -30.4 0.999 False
+
+upright, angle = docangle.correct_document("page.jpg")   # the straightened image (NumPy) and the angle
+```
+
+`angle` is in degrees, counter-clockwise positive, in [-180, 180]; `needs_review` is `True` when the tool is unsure and a person should check the page. `correct_document` raises `UndeterminedOrientation` for a page with no usable content.
+
 ## Command line
 
 ```bash
