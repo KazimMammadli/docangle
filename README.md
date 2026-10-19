@@ -121,20 +121,10 @@ flowchart TD
     ANG --> OUT(["angle · confidence · needs_review"])
     LINES -.-> OUT
 
-    classDef io fill:#2563eb,stroke:#1d4ed8,color:#ffffff
-    classDef step fill:#f1f5f9,stroke:#64748b,color:#0f172a
-    classDef dsp fill:#dcfce7,stroke:#16a34a,color:#14532d
-    classDef nn fill:#ffedd5,stroke:#ea580c,color:#7c2d12
-    classDef rare fill:#f8fafc,stroke:#94a3b8,color:#475569,stroke-dasharray:5 4
-    class IN,OUT io
-    class DEC,STR,SUM,ANG step
-    class TILT,LINES dsp
-    class LC,OWN nn
-    class REG rare
-    style Q fill:#fff7ed,stroke:#fdba74,color:#7c2d12
+    style Q fill:transparent,stroke:#9370DB
 ```
 
-Green: signal processing, no learned model. Orange: neural networks. Dashed: side paths (the rare fallback; the line count only feeds the review flag). `needs_review` is set when the confidence is below 0.90, the page has fewer than 8 text lines, or it is blank or unreadable.
+Dashed: side paths (the rare fallback; the line count only feeds the review flag). `needs_review` is set when the confidence is below 0.90, the page has fewer than 8 text lines, or it is blank or unreadable.
 
 Chapter 2 gives the formulas and the reasons, chapter 11 every idea that was tried and rejected.
 
