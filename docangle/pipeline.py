@@ -24,6 +24,7 @@ from typing import Any, Dict, List, Optional, Sequence, Tuple, Union
 import cv2
 import numpy as np
 
+from . import _models
 from .errors import ImageReadError, ModelNotFoundError, UndeterminedOrientation
 from .docrop import find_document
 from .fftskew import FFTSkew
@@ -31,11 +32,6 @@ from .orientation import OrientationClassifier
 from .regressor import AngleRegressor, make_session
 
 ImageLike = Union[str, "os.PathLike[str]", np.ndarray]
-
-_MODELS_DIR = os.environ.get(
-    "DOCANGLE_MODELS_DIR",
-    os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "models"),
-)
 
 _LCNET_MEAN = np.array([0.485, 0.456, 0.406], dtype=np.float32)
 _LCNET_STD = np.array([0.229, 0.224, 0.225], dtype=np.float32)
@@ -350,17 +346,17 @@ class DocumentOrientationPipeline:
 
     def __init__(self, config: Optional[PipelineConfig] = None):
         self.config = config or PipelineConfig()
-        self._onnx_path = self.config.onnx_path or os.path.join(_MODELS_DIR, "document_angle_detector_large.onnx")
-        self._lcnet_path = self.config.lcnet_onnx_path or os.path.join(_MODELS_DIR, "pp_lcnet_doc_ori.onnx")
         # The regressor is needed only when the configuration can ask it (fallback on, its angle for TOO_FEW_LINES, or the Hough estimator's early exit);
         # switch all of them off (`use_regressor_fallback=False`) to run without its file. A file that IS needed and is missing is an error.
         cfg = self.config
         needs_regressor = cfg.use_regressor_fallback or cfg.too_few_lines_angle == "regressor" or cfg.fine_estimator != "fft"
+        self._onnx_path = cfg.onnx_path or (_models.get("document_angle_detector_large.onnx") if needs_regressor else None)
+        self._lcnet_path = cfg.lcnet_onnx_path or _models.get("pp_lcnet_doc_ori.onnx")
         for p in ((self._onnx_path,) if needs_regressor else ()) + (self._lcnet_path,):
             if not os.path.isfile(p):
                 raise ModelNotFoundError(
-                    f"required model file not found: {p}. Models live in the repository's models/ folder: install with "
-                    f"`pip install -e .` from the repository, or point DOCANGLE_MODELS_DIR at a folder containing them."
+                    f"required model file not found: {p}. Without DOCANGLE_MODELS_DIR the models come from the repository's models/ folder "
+                    f"or the first-use download; with it, that folder must contain them."
                     + (" The 360-degree regressor is optional: PipelineConfig(use_regressor_fallback=False) runs without it." if p == self._onnx_path else ""))
         self._regressor = (AngleRegressor(self._onnx_path, self.config.ort_intra_threads, self.config.ort_spinning, self.config.ort_provider)
                            if needs_regressor else None)
@@ -368,7 +364,7 @@ class DocumentOrientationPipeline:
         self._lock = threading.Lock()
         self._pool: Optional[ThreadPoolExecutor] = None
         self._fft = FFTSkew(self.config.fft_size) if self.config.fine_estimator == "fft" else None
-        op = self.config.orient_onnx_path or os.path.join(_MODELS_DIR, "orient_cls_v4.onnx")
+        op = self.config.orient_onnx_path or (_models.get("orient_cls_v4.onnx") if self.config.orient_weight > 0 else "")
         if self.config.orient_weight > 0 and not os.path.isfile(op):                  # never continue silently on PP-LCNet alone: it is far less accurate (docs/06 6.5)
             raise ModelNotFoundError(
                 f"required model file not found: {op}. The own classifier is part of the default pipeline; see models/README.md, or set "

@@ -16,7 +16,7 @@ from .pipeline import (
     upright,
 )
 
-__version__ = "4.4.0"
+__version__ = "4.5.0"
 __all__ = [
     "DocumentOrientationPipeline", "PipelineConfig", "Result", "apply_job_consensus",
     "get_pipeline", "predict_document", "predict_document_angle", "correct_document",
