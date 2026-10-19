@@ -2,7 +2,7 @@
 
 Format after Keep a Changelog; versions are the package versions. Every entry that changes results names the evidence (`reports/FINAL_REPORT.md` section numbers, §N, or chapters of `docs/`).
 
-## [4.5.0] - unreleased
+## [4.5.0] - 2026-10-19
 - `pip install docangle`: the three pipeline models (36.0 MB) are no longer needed in the install. On first use they are downloaded from the GitHub Release `v4.4.0`, checked against a built-in SHA-256 and kept in `~/.cache/docangle/` (`$XDG_CACHE_HOME/docangle/`); a message on stderr names the files, the source and the research-use terms of the own weights (`models/README.md`). Order of lookup: `DOCANGLE_MODELS_DIR` (only that folder, never a download), the repository's `models/`, the cache, the download. Offline or a wrong checksum is a `ModelNotFoundError` that names the URL and the folder to put the file in. Results are unchanged: the files are the same ones.
 - Publishing to PyPI through GitHub Actions with Trusted Publishing (`.github/workflows/publish.yml`).
 

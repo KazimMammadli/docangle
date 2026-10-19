@@ -73,12 +73,11 @@ On every setting docangle makes the fewest wrong-quadrant errors. The one clean-
 ## Install
 
 ```bash
-git clone https://github.com/KazimMammadli/docangle && cd docangle
-pip install -e .            # numpy, opencv-python-headless, onnxruntime
-pip install -e ".[pdf]"     # + pypdfium2 for PDF input
+pip install docangle            # numpy, opencv-python-headless, onnxruntime
+pip install "docangle[pdf]"     # + pypdfium2 for PDF input
 ```
 
-Not on PyPI: the models are part of the repository, so install from a clone.
+The first call downloads the three pipeline models (36.0 MB) from the [Release](https://github.com/KazimMammadli/docangle/releases/tag/v4.4.0), verifies their SHA-256 and keeps them in `~/.cache/docangle/`. From a clone (`pip install -e .`) the models in `models/` are used and nothing is downloaded.
 
 Tests and checks (the same as continuous integration):
 
@@ -87,7 +86,7 @@ pip install -e ".[dev,pdf]"
 pytest -q && ruff check . && python -m tools.gen_config_doc --check && python -m tools.check_links
 ```
 
-Python 3.10 or newer (continuous integration runs 3.10 and 3.12; the accuracy, comparison and CPU speed measurements used 3.14; the OCR study and the GPU measurements ran in separate environments (`reports/environments_ocr_gpu.txt`) with Python 3.11.16, onnxruntime-gpu 1.19.2, PaddleOCR 3.7, EasyOCR 1.7.2 and Tesseract 5.5.3). Models are read from `models/` (see [`models/README.md`](models/README.md) for what is included and under which terms); `DOCANGLE_MODELS_DIR` points elsewhere. A GPU is optional (`PipelineConfig(ort_provider="cuda")`).
+Python 3.10 or newer (continuous integration runs 3.10 and 3.12; the accuracy, comparison and CPU speed measurements used 3.14; the OCR study and the GPU measurements ran in separate environments (`reports/environments_ocr_gpu.txt`) with Python 3.11.16, onnxruntime-gpu 1.19.2, PaddleOCR 3.7, EasyOCR 1.7.2 and Tesseract 5.5.3). Models are read from `DOCANGLE_MODELS_DIR` if set, else `models/`, else the cache (see [`models/README.md`](models/README.md) for what is included and under which terms); `DOCANGLE_MODELS_DIR` points elsewhere and is never downloaded into. A GPU is optional (`PipelineConfig(ort_provider="cuda")`).
 
 ## Command line
 

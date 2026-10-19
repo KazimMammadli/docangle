@@ -11,6 +11,7 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+      - run: python -m tools.pypi_readme      # relative links and the Mermaid diagram do not work on the PyPI page
       - run: pip install build && python -m build
       - uses: actions/upload-artifact@v4
         with:
