@@ -2,7 +2,7 @@
 
 [![tests](https://github.com/KazimMammadli/docangle/actions/workflows/tests.yml/badge.svg)](https://github.com/KazimMammadli/docangle/actions/workflows/tests.yml) ![python](https://img.shields.io/badge/python-3.10%2B-blue) [![code licence: MIT](https://img.shields.io/badge/code-MIT-green)](LICENSE) [![model weights: research use](https://img.shields.io/badge/own%20weights-research%20use-orange)](models/README.md)
 
-**How is this page turned?** `docangle` finds the rotation of a scanned or photographed Latin-script document, anywhere in [-180°, +180°], and tells you when it is not sure. It is a pre-processing step for OCR and archiving pipelines.
+**Document orientation detection for scanned and photographed pages.** `docangle` answers "how is this page turned?": it finds the rotation of a Latin-script document, anywhere in [-180°, +180°] (upright, upside down or a quarter turn, plus the tilt), and tells you when it is not sure. It is a pre-processing step for OCR and archiving pipelines.
 
 ![Left: a phone photo of a printed page turned by about 30 degrees. Right: the output of docangle, the same page upright.](docs/images/before_after.webp)
 
