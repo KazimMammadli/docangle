@@ -61,6 +61,8 @@ python -c "import json,sys; from bench.run import to_markdown; print(to_markdown
 
 | file | what it is | written by |
 |---|---|---|
+| [ocr_judge/analysis.txt](ocr_judge/analysis.txt) | OCR as the judge of the flagged pages: Tesseract and PaddleOCR readings of 143 flagged and 89 control pages in 4 quadrants (11.3); raw readings in `ocr_judge/judge_*.json`, docangle's answers and the truth in `ocr_judge/cases.json` | `bench.ocr_judge_eval` |
+| [flag_pattern_v4_4.txt](flag_pattern_v4_4.txt) | what the pages sent to review have in common (11.3); the per-case rows are in `flag_pattern_v4_4.json.gz` | `bench.flag_pattern` |
 | [ocr_rotation/all_tables.txt](ocr_rotation/all_tables.txt) | OCR engines on rotated pages: native, oracle and corrected by docangle (7.1) | `bench.ocr_rotation_eval` |
 | [ocr_rotation/quality_tables.txt](ocr_rotation/quality_tables.txt), [ocr_rotation/upright_sharpness_sweep.txt](ocr_rotation/upright_sharpness_sweep.txt) | effect of the rotation method of the corrected page (7.2) | `bench.ocr_upright_quality` |
 | [ocr_pipeline_eval.txt](ocr_pipeline_eval.txt), [ocr_pipeline_eval_tesseract.txt](ocr_pipeline_eval_tesseract.txt) | end-to-end check of `tools/ocr_pipeline.py` | `bench.ocr_pipeline_eval` |

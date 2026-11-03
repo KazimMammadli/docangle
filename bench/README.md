@@ -46,12 +46,14 @@ Scripts that produce the numbers of the [book](../docs/index.md). Run each as `p
 | `ablate` | switches pipeline components off one at a time on a dump |
 | `features`, `calibrate` | decision features dump; fitted voter weights and a learned review score (not adopted) |
 | `consensus_eval` | opt-in multi-page consensus |
+| `flag_pattern` | what sets the pages sent to review apart from the others (11.3): flag rate by pool and level, AUROC of page features |
 
 ## OCR (ch. 7)
 
 | script | what it does |
 |---|---|
 | `ocr_rotation_eval` | do OCR engines read rotated pages by themselves, and does docangle in front help |
+| `ocr_judge_eval` | can an OCR engine settle the pages docangle flags for review (11.3): collect, read in 4 quadrants with Tesseract or PaddleOCR, analyze |
 | `ocr_upright_quality` | effect of the rotation method of the corrected page on OCR |
 | `ocr_pipeline_eval` | end-to-end check of `tools/ocr_pipeline.py` |
 

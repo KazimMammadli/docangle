@@ -81,6 +81,10 @@ Without the private pools add `--datasets tobacco_cert rvl_heldout ext_funsd ext
 ```bash
 python -m bench.ocr_rotation_eval run --engine paddle_v6 --pages 12 --out reports/ocr_rotation/paddle_v6_gpu.json     # also: easyocr, tesseract
 python -m bench.ocr_rotation_eval analyze reports/ocr_rotation/*.json
+python -m bench.ocr_judge_eval collect --out /tmp/ocr_judge                                                    # 11.3: flagged pages of the main benchmark's cases and a control sample
+python -m bench.ocr_judge_eval judge --out /tmp/ocr_judge --tesseract tesseract --psm 4                              # or: --engine paddle --paddle-model mobile --device gpu:0 (in the interpreter that has PaddleOCR)
+python -m bench.ocr_judge_eval analyze --out /tmp/ocr_judge
+python -m bench.flag_pattern collect --out /tmp/flags.json.gz && python -m bench.flag_pattern analyze --out /tmp/flags.json.gz   # what the flagged pages have in common
 python -m bench.ocr_upright_quality run --engine paddle_v6 --pages 12 --out reports/ocr_rotation/quality_paddle_v6_gpu.json
 python -m bench.ocr_upright_quality analyze reports/ocr_rotation/quality_*.json
 python -m bench.ocr_pipeline_eval --out out/ocr_eval                                # the end-to-end check (needs paddleocr + paddlepaddle-gpu); writes out/ocr_eval/summary.txt

@@ -1,0 +1,45 @@
+## Flag rate by pool and level
+
+| pool | scan | photo_easy | photo_hard |
+|---|---|---|---|
+| ext_cord | 6.7 % (20/300) | 5.3 % (16/300) | 10.7 % (32/300) |
+| ext_doclaynet | 1.3 % (4/300) | 4.7 % (14/300) | 5.3 % (16/300) |
+| invoices | 1.3 % (4/300) | 2.7 % (8/300) | 4.0 % (12/300) |
+| rvl_heldout | 1.3 % (4/300) | 2.0 % (6/300) | 1.7 % (5/300) |
+
+## First reason of the 141 flagged pages (of 3600 cases); a page can carry several codes, none = plain low confidence
+
+- none: 69
+- REGRESSOR_OVERRIDE: 47
+- TOO_FEW_LINES: 15
+- LOW_LCNET_SCORE: 10
+median text lines: flagged 57, not flagged 152; flagged pages with fewer than 8 lines: 15
+
+## What separates flagged from not flagged, inside each pool (AUROC: 0.5 = nothing, 1.0 = perfect; + = flagged pages have the higher value)
+
+| feature | ext_cord | ext_doclaynet | invoices | rvl_heldout | all four |
+|---|---|---|---|---|---|
+| abs_tilt | 0.58+ | 0.61+ | 0.67+ | 0.63+ | 0.61+ |
+| src_long | 0.49- | 0.50+ | 0.56+ | 0.50+ | 0.47- |
+| src_aspect | 0.43- | 0.50+ | 0.53+ | 0.27- | 0.57+ |
+| src_ink | 0.45- | 0.50- | 0.31- | 0.55+ | 0.58+ |
+| src_sharp | 0.36- | 0.21- | 0.37- | 0.56+ | 0.29- |
+| src_contrast | 0.45- | 0.49- | 0.32- | 0.53+ | 0.45- |
+| frame_sharp | 0.43- | 0.26- | 0.38- | 0.40- | 0.31- |
+| frame_contrast | 0.40- | 0.59+ | 0.58+ | 0.63+ | 0.52+ |
+| is_180 | 0.48- | 0.49- | 0.48- | 0.51+ | 0.48- |
+| is_90 | 0.49- | 0.53+ | 0.48- | 0.46- | 0.50- |
+| num_lines | 0.39- | 0.17- | 0.30- | 0.50+ | 0.29- |
+
+## Flag rate by feature third (all four pools, pool-balanced: thirds are cut inside each pool)
+
+- abs_tilt: lowest third 2.6 %, middle 3.8 %, highest 5.4 %
+- src_sharp: lowest third 6.8 %, middle 3.1 %, highest 1.9 %
+- src_contrast: lowest third 5.4 %, middle 2.0 %, highest 4.3 %
+- src_ink: lowest third 4.5 %, middle 4.2 %, highest 3.1 %
+- src_aspect: lowest third 5.2 %, middle 3.4 %, highest 3.8 %
+- frame_sharp: lowest third 5.8 %, middle 3.5 %, highest 2.4 %
+- num_lines: lowest third 6.8 %, middle 2.7 %, highest 2.3 %
+
+flag rate when the page is upside down (180): 3.5 %, quarter turn: 3.9 %, upright: 4.5 %
+flag rate when the tilt is within 15 degrees of the 45-degree boundary: 5.4 % (1173 cases), otherwise 3.2 %
