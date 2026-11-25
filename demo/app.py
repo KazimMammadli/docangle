@@ -14,13 +14,14 @@ NOTE = ("Latin-script documents only; other scripts were not tested. Do not uplo
 
 try:
     import spaces
-    gpu = spaces.GPU(duration=10)   # ZeroGPU Spaces insist on a GPU function; docangle runs on the CPU, the allocation only satisfies the platform
-except ImportError:                 # a laptop or a CPU Space
-    def gpu(fn):
-        return fn
+
+    @spaces.GPU(duration=1)
+    def _gpu_placeholder():   # never called: a ZeroGPU Space refuses to start without a GPU function, docangle runs on the CPU and needs none
+        pass
+except ImportError:           # a laptop or a CPU Space
+    pass
 
 
-@gpu
 def analyze(image):
     if image is None:
         raise gr.Error("Upload an image first.")
