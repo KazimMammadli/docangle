@@ -4,6 +4,8 @@
 
 **Document orientation detection for scanned and photographed pages.** `docangle` answers "how is this page turned?": it finds the rotation of a Latin-script document, anywhere in [-180°, +180°] (upright, upside down or a quarter turn, plus the tilt), and tells you when it is not sure. It is a pre-processing step for OCR and archiving pipelines.
 
+**[Try it online](https://huggingface.co/spaces/kazimammad/docangle)**: upload a page and see its angle, the review flag and the straightened page (a Hugging Face Space; do not upload confidential documents).
+
 ![Left: a phone photo of a printed page turned by about 30 degrees. Right: the output of docangle, the same page upright.](docs/images/before_after.webp)
 
 *One phone photo of a printed page, not a benchmark: `python -m docangle photo.jpg -o upright.jpg` gave angle −30.4°, confidence 0.999, `needs_review` false ([`reports/readme_example.txt`](reports/readme_example.txt)). Both images are cropped to the page for display; the output itself keeps the whole turned frame.*
