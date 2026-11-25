@@ -12,6 +12,15 @@ NOTE = ("Latin-script documents only; other scripts were not tested. Do not uplo
         "The project's own model weights are for research and evaluation use.")
 
 
+try:
+    import spaces
+    gpu = spaces.GPU(duration=10)   # ZeroGPU Spaces insist on a GPU function; docangle runs on the CPU, the allocation only satisfies the platform
+except ImportError:                 # a laptop or a CPU Space
+    def gpu(fn):
+        return fn
+
+
+@gpu
 def analyze(image):
     if image is None:
         raise gr.Error("Upload an image first.")
